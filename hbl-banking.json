@@ -1,0 +1,115 @@
+{
+  "bank": "hbl",
+  "questions": [
+    {
+      "q": "Which of the following is Pakistan's largest commercial bank?",
+      "options": [
+        "Askari Bank",
+        "HBL",
+        "Bank Alfalah",
+        "Summit Bank"
+      ],
+      "answer": 1,
+      "explanation": "Habib Bank Limited (HBL) is widely recognised as Pakistan's largest commercial bank."
+    },
+    {
+      "q": "A current account in a bank generally ___",
+      "options": [
+        "pays no interest",
+        "pays high interest",
+        "cannot be used for cheques",
+        "is only for students"
+      ],
+      "answer": 0,
+      "explanation": "Current accounts are meant for frequent transactions and normally pay no interest."
+    },
+    {
+      "q": "The main role of the State Bank of Pakistan is to ___",
+      "options": [
+        "sell cars",
+        "run post offices",
+        "act as the central bank",
+        "collect income tax"
+      ],
+      "answer": 2,
+      "explanation": "The State Bank is Pakistan's central bank, regulating monetary policy and banks."
+    },
+    {
+      "q": "ATM stands for:",
+      "options": [
+        "Automatic Transfer Machine",
+        "Auto Teller Money",
+        "Account Transfer Mode",
+        "Automated Teller Machine"
+      ],
+      "answer": 3,
+      "explanation": "ATM stands for Automated Teller Machine, used for cash withdrawals and basic services."
+    },
+    {
+      "q": "A savings account is mainly useful because it ___",
+      "options": [
+        "charges the highest fees",
+        "earns profit on deposits",
+        "never allows withdrawals",
+        "needs no documentation"
+      ],
+      "answer": 1,
+      "explanation": "Savings accounts pay profit (interest) on the money deposited in them."
+    },
+    {
+      "q": "A cheque is best described as ___",
+      "options": [
+        "a written order to pay",
+        "a type of currency note",
+        "a loan agreement",
+        "a tax receipt"
+      ],
+      "answer": 0,
+      "explanation": "A cheque is a written instruction to the bank to pay a stated sum to a person."
+    },
+    {
+      "q": "A fixed (term) deposit differs from a savings account because ___",
+      "options": [
+        "it pays no profit",
+        "it allows unlimited withdrawals",
+        "money is locked for a fixed period",
+        "it has no paperwork"
+      ],
+      "answer": 2,
+      "explanation": "In a fixed deposit the money stays with the bank for a set term, usually earning higher profit."
+    },
+    {
+      "q": "An overdraft facility allows a customer to ___",
+      "options": [
+        "deposit foreign currency",
+        "withdraw more than the account balance",
+        "open two accounts",
+        "close a loan early"
+      ],
+      "answer": 1,
+      "explanation": "An overdraft lets an account holder withdraw beyond the available balance up to an agreed limit."
+    },
+    {
+      "q": "Which of these is a well-known instant digital payment system in Pakistan?",
+      "options": [
+        "Visa Card",
+        "PayPal",
+        "Western Union",
+        "Raast"
+      ],
+      "answer": 3,
+      "explanation": "Raast is Pakistan's instant payment system enabling quick bank-to-bank transfers."
+    },
+    {
+      "q": "KYC in banking stands for:",
+      "options": [
+        "Know Your Customer",
+        "Keep Your Cash",
+        "Key Yield Certificate",
+        "Kind Yearly Charge"
+      ],
+      "answer": 0,
+      "explanation": "KYC (Know Your Customer) is the process banks use to verify a customer's identity."
+    }
+  ]
+}

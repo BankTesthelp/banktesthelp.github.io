@@ -1,0 +1,115 @@
+{
+  "bank": "mcb",
+  "questions": [
+    {
+      "q": "Find the next number in the series: 5, 10, 20, 40, ___",
+      "options": [
+        "60",
+        "80",
+        "70",
+        "90"
+      ],
+      "answer": 1,
+      "explanation": "Each number doubles: 40 x 2 = 80."
+    },
+    {
+      "q": "Find the odd one out:",
+      "options": [
+        "Rose",
+        "Jasmine",
+        "Mango tree",
+        "Sunflower"
+      ],
+      "answer": 2,
+      "explanation": "Rose, jasmine and sunflower are flowering plants; a mango tree is a fruit tree."
+    },
+    {
+      "q": "Pen is to Write as Knife is to ___",
+      "options": [
+        "cut",
+        "cook",
+        "eat",
+        "draw"
+      ],
+      "answer": 0,
+      "explanation": "A pen is used to write, just as a knife is used to cut."
+    },
+    {
+      "q": "Find the next letter in the series: B, D, G, K, ___",
+      "options": [
+        "M",
+        "N",
+        "O",
+        "P"
+      ],
+      "answer": 3,
+      "explanation": "The gaps grow by one (+2, +3, +4), so K + 5 = P."
+    },
+    {
+      "q": "If 4 machines make 4 parts in 4 minutes, how long will 8 machines take to make 8 parts?",
+      "options": [
+        "2 minutes",
+        "8 minutes",
+        "4 minutes",
+        "16 minutes"
+      ],
+      "answer": 2,
+      "explanation": "Each machine makes one part in 4 minutes, so 8 machines still need 4 minutes for 8 parts."
+    },
+    {
+      "q": "If DOG is coded as 26 (4 + 15 + 7), what is CAT coded as?",
+      "options": [
+        "23",
+        "24",
+        "25",
+        "26"
+      ],
+      "answer": 1,
+      "explanation": "CAT = 3 + 1 + 20 = 24."
+    },
+    {
+      "q": "Bird is to Nest as Bee is to ___",
+      "options": [
+        "tree",
+        "hole",
+        "hive",
+        "honey"
+      ],
+      "answer": 2,
+      "explanation": "Birds live in nests, just as bees live in hives."
+    },
+    {
+      "q": "Find the next number in the series: 100, 90, 81, 73, ___",
+      "options": [
+        "66",
+        "65",
+        "64",
+        "63"
+      ],
+      "answer": 0,
+      "explanation": "The drops shrink by one (-10, -9, -8), so 73 - 7 = 66."
+    },
+    {
+      "q": "Find the odd one out: 8, 27, 64, 100",
+      "options": [
+        "8",
+        "27",
+        "64",
+        "100"
+      ],
+      "answer": 3,
+      "explanation": "8, 27 and 64 are perfect cubes (2^3, 3^3, 4^3); 100 is not."
+    },
+    {
+      "q": "Some pens are pencils. All pencils are erasers. Which conclusion is valid?",
+      "options": [
+        "All pens are erasers",
+        "Some pens are erasers",
+        "No pen is an eraser",
+        "All erasers are pens"
+      ],
+      "answer": 1,
+      "explanation": "The pens that are pencils must also be erasers, so 'some pens are erasers' follows."
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "bank": "hbl",
+  "questions": [
+    {
+      "q": "Choose the word closest in meaning to PRUDENT:",
+      "options": [
+        "foolish",
+        "wise",
+        "careless",
+        "late"
+      ],
+      "answer": 1,
+      "explanation": "Prudent means acting with care and good judgment, so 'wise' is the closest synonym."
+    },
+    {
+      "q": "Choose the word opposite in meaning to VICTORY:",
+      "options": [
+        "triumph",
+        "success",
+        "defeat",
+        "win"
+      ],
+      "answer": 2,
+      "explanation": "'Defeat' is the direct opposite of 'victory', while the other options are synonyms."
+    },
+    {
+      "q": "She has been working here ___ 2015.",
+      "options": [
+        "since",
+        "for",
+        "from",
+        "by"
+      ],
+      "answer": 0,
+      "explanation": "'Since' is used with a specific point in time such as a year, while 'for' is used with a duration."
+    },
+    {
+      "q": "Identify the error: 'Neither of the two managers were present at the meeting.'",
+      "options": [
+        "Neither",
+        "were",
+        "two",
+        "managers"
+      ],
+      "answer": 1,
+      "explanation": "'Neither' is singular, so the verb must be 'was', not 'were'."
+    },
+    {
+      "q": "Choose the correct meaning of the idiom 'a piece of cake':",
+      "options": [
+        "a difficult task",
+        "a sweet dessert",
+        "an expensive gift",
+        "a very easy task"
+      ],
+      "answer": 3,
+      "explanation": "The idiom 'a piece of cake' means something very easy to do."
+    },
+    {
+      "q": "One of the boys ___ left his bag in the classroom.",
+      "options": [
+        "have",
+        "are",
+        "has",
+        "were"
+      ],
+      "answer": 2,
+      "explanation": "'One of the boys' is singular, so it takes the singular verb 'has'."
+    },
+    {
+      "q": "Choose the word closest in meaning to BRAVE:",
+      "options": [
+        "courageous",
+        "timid",
+        "cruel",
+        "weak"
+      ],
+      "answer": 0,
+      "explanation": "'Courageous' means showing no fear, which is the same as 'brave'."
+    },
+    {
+      "q": "Choose the word opposite in meaning to ANCIENT:",
+      "options": [
+        "old",
+        "antique",
+        "modern",
+        "historic"
+      ],
+      "answer": 2,
+      "explanation": "'Modern' means belonging to the present time, the opposite of 'ancient'."
+    },
+    {
+      "q": "Choose the correct meaning of the idiom 'to spill the beans':",
+      "options": [
+        "to cook food",
+        "to reveal a secret",
+        "to waste money",
+        "to clean up"
+      ],
+      "answer": 1,
+      "explanation": "'Spill the beans' means to disclose secret information by accident or too soon."
+    },
+    {
+      "q": "The letter ___ yesterday by the manager.",
+      "options": [
+        "was sent",
+        "sent",
+        "is send",
+        "send"
+      ],
+      "answer": 0,
+      "explanation": "The sentence is in the passive voice in the past tense, so 'was sent' is correct."
+    }
+  ]
+}

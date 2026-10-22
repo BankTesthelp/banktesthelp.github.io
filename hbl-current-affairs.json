@@ -1,0 +1,115 @@
+{
+  "bank": "hbl",
+  "questions": [
+    {
+      "q": "Which institution regulates commercial banks in Pakistan?",
+      "options": [
+        "State Bank of Pakistan",
+        "SECP",
+        "Ministry of Finance",
+        "FBR"
+      ],
+      "answer": 0,
+      "explanation": "The State Bank of Pakistan is the central bank and regulator of the banking sector."
+    },
+    {
+      "q": "What is the national animal of Pakistan?",
+      "options": [
+        "Lion",
+        "Tiger",
+        "Markhor",
+        "Leopard"
+      ],
+      "answer": 2,
+      "explanation": "The Markhor, a wild goat, is the national animal of Pakistan."
+    },
+    {
+      "q": "The head of the State Bank of Pakistan is officially titled the ___",
+      "options": [
+        "Chairman",
+        "President",
+        "Director",
+        "Governor"
+      ],
+      "answer": 3,
+      "explanation": "The central bank is headed by a Governor."
+    },
+    {
+      "q": "Which city is the main financial and commercial hub of Pakistan?",
+      "options": [
+        "Lahore",
+        "Karachi",
+        "Islamabad",
+        "Faisalabad"
+      ],
+      "answer": 1,
+      "explanation": "Karachi hosts the stock exchange, the central bank and most corporate head offices."
+    },
+    {
+      "q": "What is the national flower of Pakistan?",
+      "options": [
+        "Jasmine",
+        "Rose",
+        "Tulip",
+        "Sunflower"
+      ],
+      "answer": 0,
+      "explanation": "Jasmine (locally called chambeli) is the national flower of Pakistan."
+    },
+    {
+      "q": "IMF stands for:",
+      "options": [
+        "Indian Monetary Fund",
+        "Islamic Monetary Fund",
+        "International Monetary Fund",
+        "Interbank Monetary Fund"
+      ],
+      "answer": 2,
+      "explanation": "The IMF (International Monetary Fund) is a global institution promoting financial stability."
+    },
+    {
+      "q": "Which sport is traditionally regarded as the national game of Pakistan?",
+      "options": [
+        "Cricket",
+        "Hockey",
+        "Football",
+        "Squash"
+      ],
+      "answer": 1,
+      "explanation": "Field hockey is traditionally regarded as Pakistan's national game."
+    },
+    {
+      "q": "Pakistan gained independence in which year?",
+      "options": [
+        "1945",
+        "1946",
+        "1948",
+        "1947"
+      ],
+      "answer": 3,
+      "explanation": "Pakistan came into being on 14 August 1947."
+    },
+    {
+      "q": "WTO stands for:",
+      "options": [
+        "World Trade Organization",
+        "World Transport Organization",
+        "Western Trade Office",
+        "World Tourism Office"
+      ],
+      "answer": 0,
+      "explanation": "The WTO (World Trade Organization) deals with global trade rules."
+    },
+    {
+      "q": "Which of these is a long-standing function of a central bank?",
+      "options": [
+        "Opening savings accounts",
+        "Issuing currency notes",
+        "Selling groceries",
+        "Running schools"
+      ],
+      "answer": 1,
+      "explanation": "Issuing a country's currency is a core, long-standing function of every central bank."
+    }
+  ]
+}

@@ -1,0 +1,115 @@
+{
+  "bank": "mcb",
+  "questions": [
+    {
+      "q": "MCB Bank was formerly known as ___",
+      "options": [
+        "Muslim Commercial Bank",
+        "Metropolitan Commercial Bank",
+        "Modern City Bank",
+        "Mercantile Cooperative Bank"
+      ],
+      "answer": 0,
+      "explanation": "MCB originally stood for Muslim Commercial Bank before it was privatised."
+    },
+    {
+      "q": "Which type of bank account is best suited for daily business transactions?",
+      "options": [
+        "Savings account",
+        "Current account",
+        "Fixed deposit",
+        "Student account"
+      ],
+      "answer": 1,
+      "explanation": "Current accounts allow frequent deposits and withdrawals without interest, suiting businesses."
+    },
+    {
+      "q": "A bank's main source of profit is ___",
+      "options": [
+        "account opening fees",
+        "locker rent",
+        "interest earned on loans",
+        "selling stationery"
+      ],
+      "answer": 2,
+      "explanation": "Banks earn mainly by lending deposits at higher interest than they pay to depositors."
+    },
+    {
+      "q": "PIN stands for:",
+      "options": [
+        "Private Internet Number",
+        "Public Identity Name",
+        "Personal Index Number",
+        "Personal Identification Number"
+      ],
+      "answer": 3,
+      "explanation": "PIN (Personal Identification Number) secures ATM and card transactions."
+    },
+    {
+      "q": "A loan given against property as security is called a ___",
+      "options": [
+        "personal loan",
+        "mortgage",
+        "overdraft",
+        "grant"
+      ],
+      "answer": 1,
+      "explanation": "A mortgage is a loan secured against immovable property."
+    },
+    {
+      "q": "A demand draft is best described as ___",
+      "options": [
+        "a prepaid payment instrument",
+        "a post-dated cheque",
+        "a savings passbook",
+        "a loan document"
+      ],
+      "answer": 0,
+      "explanation": "A demand draft is prepaid, so the bank guarantees payment to the recipient."
+    },
+    {
+      "q": "Deposit protection in Pakistan is provided through the ___",
+      "options": [
+        "Stock Exchange",
+        "FBR",
+        "Pakistan Deposit Protection Corporation",
+        "Trade Union"
+      ],
+      "answer": 2,
+      "explanation": "The Pakistan Deposit Protection Corporation insures bank deposits up to a set limit."
+    },
+    {
+      "q": "Internet banking mainly allows customers to ___",
+      "options": [
+        "meet the manager",
+        "collect cash at home",
+        "print currency",
+        "transfer funds online"
+      ],
+      "answer": 3,
+      "explanation": "Internet banking lets customers transfer funds and manage accounts online."
+    },
+    {
+      "q": "The rate at which the State Bank lends to commercial banks is called the ___",
+      "options": [
+        "exchange rate",
+        "policy rate",
+        "tax rate",
+        "profit rate"
+      ],
+      "answer": 1,
+      "explanation": "The policy rate is the SBP's key lending rate and anchors market interest rates."
+    },
+    {
+      "q": "A bank statement shows ___",
+      "options": [
+        "a record of account transactions",
+        "the bank's annual profit",
+        "the manager's salary",
+        "new loan offers"
+      ],
+      "answer": 0,
+      "explanation": "A bank statement lists all deposits, withdrawals and charges in an account over a period."
+    }
+  ]
+}

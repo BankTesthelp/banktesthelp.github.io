@@ -1,0 +1,115 @@
+{
+  "bank": "mcb",
+  "questions": [
+    {
+      "q": "What is 20% of 350?",
+      "options": [
+        "60",
+        "65",
+        "70",
+        "75"
+      ],
+      "answer": 2,
+      "explanation": "20% of 350 = 0.20 x 350 = 70."
+    },
+    {
+      "q": "Rs. 180 is divided in the ratio 4:5. What is the larger share?",
+      "options": [
+        "100",
+        "90",
+        "110",
+        "95"
+      ],
+      "answer": 0,
+      "explanation": "Total parts = 9. Larger share = (5/9) x 180 = 100."
+    },
+    {
+      "q": "Find the average of 5, 10, 15, 20 and 25.",
+      "options": [
+        "12",
+        "15",
+        "18",
+        "20"
+      ],
+      "answer": 1,
+      "explanation": "Average = (5 + 10 + 15 + 20 + 25) / 5 = 75 / 5 = 15."
+    },
+    {
+      "q": "A trader buys an item for Rs. 800 and sells it for Rs. 720. What is the loss percentage?",
+      "options": [
+        "5%",
+        "8%",
+        "12%",
+        "10%"
+      ],
+      "answer": 3,
+      "explanation": "Loss = 800 - 720 = 80. Loss % = (80/800) x 100 = 10%."
+    },
+    {
+      "q": "Find the simple interest on Rs. 5,000 at 8% per year for 3 years.",
+      "options": [
+        "Rs. 1,000",
+        "Rs. 1,100",
+        "Rs. 1,200",
+        "Rs. 1,300"
+      ],
+      "answer": 2,
+      "explanation": "Simple interest = (5000 x 8 x 3) / 100 = Rs. 1,200."
+    },
+    {
+      "q": "If 2x = 50, what is the value of x?",
+      "options": [
+        "25",
+        "20",
+        "30",
+        "15"
+      ],
+      "answer": 0,
+      "explanation": "x = 50 / 2 = 25."
+    },
+    {
+      "q": "What is 7/10 of 300?",
+      "options": [
+        "200",
+        "210",
+        "220",
+        "230"
+      ],
+      "answer": 1,
+      "explanation": "(7/10) x 300 = 7 x 30 = 210."
+    },
+    {
+      "q": "A sofa priced at Rs. 2,000 is sold at a 15% discount. What is the sale price?",
+      "options": [
+        "Rs. 1,800",
+        "Rs. 1,750",
+        "Rs. 1,650",
+        "Rs. 1,700"
+      ],
+      "answer": 3,
+      "explanation": "Discount = 15% of 2000 = 300. Sale price = 2000 - 300 = 1700."
+    },
+    {
+      "q": "A train covers 450 km in 5 hours. What is its average speed?",
+      "options": [
+        "80 km/h",
+        "85 km/h",
+        "90 km/h",
+        "95 km/h"
+      ],
+      "answer": 2,
+      "explanation": "Speed = 450 / 5 = 90 km/h."
+    },
+    {
+      "q": "What is 12% of 250?",
+      "options": [
+        "30",
+        "25",
+        "35",
+        "28"
+      ],
+      "answer": 0,
+      "explanation": "12% of 250 = 0.12 x 250 = 30."
+    }
+  ]
+}

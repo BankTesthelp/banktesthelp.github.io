@@ -1,0 +1,115 @@
+{
+  "bank": "mcb",
+  "questions": [
+    {
+      "q": "Which bank acts as the central bank of Pakistan?",
+      "options": [
+        "National Bank",
+        "State Bank of Pakistan",
+        "MCB Bank",
+        "HBL"
+      ],
+      "answer": 1,
+      "explanation": "The State Bank of Pakistan is the country's central bank."
+    },
+    {
+      "q": "What is the national bird of Pakistan?",
+      "options": [
+        "Parrot",
+        "Eagle",
+        "Chukar partridge",
+        "Sparrow"
+      ],
+      "answer": 2,
+      "explanation": "The Chukar partridge (chakur) is the national bird of Pakistan."
+    },
+    {
+      "q": "Lahore is often called the ___ of Pakistan.",
+      "options": [
+        "Heart",
+        "Brain",
+        "Gateway",
+        "Crown"
+      ],
+      "answer": 0,
+      "explanation": "Lahore is traditionally called the 'Heart of Pakistan' for its cultural importance."
+    },
+    {
+      "q": "SAARC stands for:",
+      "options": [
+        "South Asian Aid and Relief Committee",
+        "South Asia Agricultural Research Centre",
+        "Southeast Asian Regional Council",
+        "South Asian Association for Regional Cooperation"
+      ],
+      "answer": 3,
+      "explanation": "SAARC is the South Asian Association for Regional Cooperation, a regional bloc."
+    },
+    {
+      "q": "Which colours appear on the national flag of Pakistan?",
+      "options": [
+        "Red and white",
+        "Green and white",
+        "Blue and yellow",
+        "Black and green"
+      ],
+      "answer": 1,
+      "explanation": "Pakistan's flag is green and white with a crescent and star."
+    },
+    {
+      "q": "OIC stands for:",
+      "options": [
+        "Oil Importing Countries",
+        "Organisation of Islamic Cooperation",
+        "Overseas Investment Corporation",
+        "Oriental Insurance Company"
+      ],
+      "answer": 2,
+      "explanation": "The OIC (Organisation of Islamic Cooperation) is a bloc of Muslim-majority countries."
+    },
+    {
+      "q": "What is the currency of Pakistan?",
+      "options": [
+        "Taka",
+        "Dinar",
+        "Dirham",
+        "Rupee"
+      ],
+      "answer": 3,
+      "explanation": "Pakistan's official currency is the Pakistani Rupee."
+    },
+    {
+      "q": "Which province of Pakistan is the largest by area?",
+      "options": [
+        "Punjab",
+        "Balochistan",
+        "Sindh",
+        "Khyber Pakhtunkhwa"
+      ],
+      "answer": 1,
+      "explanation": "Balochistan covers the largest land area of Pakistan's four provinces."
+    },
+    {
+      "q": "Where are the headquarters of the United Nations located?",
+      "options": [
+        "Geneva",
+        "Paris",
+        "London",
+        "New York"
+      ],
+      "answer": 3,
+      "explanation": "The UN headquarters is in New York City."
+    },
+    {
+      "q": "The Indus Waters Treaty was signed between which two countries?",
+      "options": [
+        "Pakistan and China",
+        "India and Bangladesh",
+        "Pakistan and India",
+        "Pakistan and Afghanistan"
+      ],
+      "answer": 2,
+      "explanation": "The 1960 Indus Waters Treaty governs river sharing between Pakistan and India."
+    }
+  ]
+}

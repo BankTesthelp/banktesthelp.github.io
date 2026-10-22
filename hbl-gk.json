@@ -1,0 +1,115 @@
+{
+  "bank": "hbl",
+  "questions": [
+    {
+      "q": "What is the capital of Pakistan?",
+      "options": [
+        "Lahore",
+        "Karachi",
+        "Islamabad",
+        "Peshawar"
+      ],
+      "answer": 2,
+      "explanation": "Islamabad has been the capital of Pakistan since the 1960s."
+    },
+    {
+      "q": "Which is the longest river of Pakistan?",
+      "options": [
+        "Indus",
+        "Jhelum",
+        "Chenab",
+        "Ravi"
+      ],
+      "answer": 0,
+      "explanation": "The Indus River is the longest river flowing through Pakistan."
+    },
+    {
+      "q": "What is the currency of Japan?",
+      "options": [
+        "Won",
+        "Yen",
+        "Yuan",
+        "Ringgit"
+      ],
+      "answer": 1,
+      "explanation": "Japan's official currency is the Yen."
+    },
+    {
+      "q": "Mount Everest is located in which country?",
+      "options": [
+        "India",
+        "China",
+        "Bhutan",
+        "Nepal"
+      ],
+      "answer": 3,
+      "explanation": "Mount Everest lies on the border of Nepal and Tibet, with its summit in Nepal."
+    },
+    {
+      "q": "Which is the national language of Pakistan?",
+      "options": [
+        "English",
+        "Urdu",
+        "Punjabi",
+        "Arabic"
+      ],
+      "answer": 1,
+      "explanation": "Urdu is the national language of Pakistan (English is an official language)."
+    },
+    {
+      "q": "Which is the largest hot desert in the world?",
+      "options": [
+        "Sahara",
+        "Gobi",
+        "Thar",
+        "Kalahari"
+      ],
+      "answer": 0,
+      "explanation": "The Sahara in North Africa is the world's largest hot desert."
+    },
+    {
+      "q": "What is the capital of Australia?",
+      "options": [
+        "Sydney",
+        "Melbourne",
+        "Canberra",
+        "Perth"
+      ],
+      "answer": 2,
+      "explanation": "Canberra is the capital of Australia; Sydney is only its largest city."
+    },
+    {
+      "q": "Which gas do green plants absorb from the air for photosynthesis?",
+      "options": [
+        "Oxygen",
+        "Nitrogen",
+        "Hydrogen",
+        "Carbon dioxide"
+      ],
+      "answer": 3,
+      "explanation": "Plants absorb carbon dioxide and release oxygen during photosynthesis."
+    },
+    {
+      "q": "The K2 mountain peak is part of which mountain range?",
+      "options": [
+        "Himalayas",
+        "Karakoram",
+        "Hindu Kush",
+        "Sulaiman"
+      ],
+      "answer": 1,
+      "explanation": "K2, the world's second-highest peak, lies in the Karakoram range."
+    },
+    {
+      "q": "Which is the largest ocean in the world?",
+      "options": [
+        "Pacific",
+        "Atlantic",
+        "Indian",
+        "Arctic"
+      ],
+      "answer": 0,
+      "explanation": "The Pacific Ocean covers more area than all other oceans."
+    }
+  ]
+}

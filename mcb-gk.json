@@ -1,0 +1,115 @@
+{
+  "bank": "mcb",
+  "questions": [
+    {
+      "q": "What is the capital of China?",
+      "options": [
+        "Beijing",
+        "Shanghai",
+        "Hong Kong",
+        "Guangzhou"
+      ],
+      "answer": 0,
+      "explanation": "Beijing is the capital of China; Shanghai is its largest city."
+    },
+    {
+      "q": "Which is the smallest continent in the world?",
+      "options": [
+        "Europe",
+        "Australia",
+        "Antarctica",
+        "South America"
+      ],
+      "answer": 1,
+      "explanation": "Australia is the smallest continent by land area."
+    },
+    {
+      "q": "Who is the national poet of Pakistan?",
+      "options": [
+        "Faiz Ahmed Faiz",
+        "Mir Taqi Mir",
+        "Allama Iqbal",
+        "Ahmed Faraz"
+      ],
+      "answer": 2,
+      "explanation": "Allama Muhammad Iqbal is honoured as the national poet of Pakistan."
+    },
+    {
+      "q": "What is the currency of the United Kingdom?",
+      "options": [
+        "Euro",
+        "Dollar",
+        "Franc",
+        "Pound sterling"
+      ],
+      "answer": 3,
+      "explanation": "The UK uses the pound sterling, not the euro."
+    },
+    {
+      "q": "Which river flows through the city of Lahore?",
+      "options": [
+        "Ravi",
+        "Indus",
+        "Jhelum",
+        "Sutlej"
+      ],
+      "answer": 0,
+      "explanation": "Lahore is situated on the banks of the River Ravi."
+    },
+    {
+      "q": "What is the capital of Canada?",
+      "options": [
+        "Toronto",
+        "Ottawa",
+        "Vancouver",
+        "Montreal"
+      ],
+      "answer": 1,
+      "explanation": "Ottawa is the capital of Canada; Toronto is its largest city."
+    },
+    {
+      "q": "Which is the largest country in the world by area?",
+      "options": [
+        "Canada",
+        "China",
+        "Russia",
+        "USA"
+      ],
+      "answer": 2,
+      "explanation": "Russia is the largest country by land area."
+    },
+    {
+      "q": "How many provinces are there in Pakistan?",
+      "options": [
+        "3",
+        "5",
+        "6",
+        "4"
+      ],
+      "answer": 3,
+      "explanation": "Pakistan has four provinces: Punjab, Sindh, Khyber Pakhtunkhwa and Balochistan."
+    },
+    {
+      "q": "Which sea borders Pakistan to the south?",
+      "options": [
+        "Red Sea",
+        "Arabian Sea",
+        "Mediterranean Sea",
+        "Caspian Sea"
+      ],
+      "answer": 1,
+      "explanation": "Pakistan's southern coastline lies along the Arabian Sea."
+    },
+    {
+      "q": "What is the capital of Turkey?",
+      "options": [
+        "Ankara",
+        "Istanbul",
+        "Izmir",
+        "Antalya"
+      ],
+      "answer": 0,
+      "explanation": "Ankara is the capital of Turkey; Istanbul is its largest city."
+    }
+  ]
+}

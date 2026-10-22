@@ -1,0 +1,115 @@
+{
+  "bank": "mcb",
+  "questions": [
+    {
+      "q": "Choose the word closest in meaning to RAPID:",
+      "options": [
+        "slow",
+        "gradual",
+        "swift",
+        "late"
+      ],
+      "answer": 2,
+      "explanation": "'Swift' means happening quickly, which is the same as 'rapid'."
+    },
+    {
+      "q": "Choose the word opposite in meaning to HONEST:",
+      "options": [
+        "dishonest",
+        "sincere",
+        "loyal",
+        "kind"
+      ],
+      "answer": 0,
+      "explanation": "'Dishonest' is the direct opposite of 'honest'."
+    },
+    {
+      "q": "He is very good ___ mathematics.",
+      "options": [
+        "in",
+        "at",
+        "on",
+        "for"
+      ],
+      "answer": 1,
+      "explanation": "The correct preposition with 'good' when describing a skill is 'at'."
+    },
+    {
+      "q": "Identify the error: 'Each of the students have submitted their forms.'",
+      "options": [
+        "Each",
+        "of",
+        "have",
+        "their"
+      ],
+      "answer": 2,
+      "explanation": "'Each' is singular, so the verb should be 'has', not 'have'."
+    },
+    {
+      "q": "Choose the correct meaning of the idiom 'to break the ice':",
+      "options": [
+        "to end a friendship",
+        "to feel very cold",
+        "to win a prize",
+        "to start a conversation"
+      ],
+      "answer": 3,
+      "explanation": "'Break the ice' means to do or say something to start a friendly conversation."
+    },
+    {
+      "q": "Choose the word closest in meaning to GENEROUS:",
+      "options": [
+        "stingy",
+        "charitable",
+        "greedy",
+        "poor"
+      ],
+      "answer": 1,
+      "explanation": "'Charitable' means giving freely to others, the same as 'generous'."
+    },
+    {
+      "q": "Choose the word opposite in meaning to EXPAND:",
+      "options": [
+        "contract",
+        "extend",
+        "enlarge",
+        "grow"
+      ],
+      "answer": 0,
+      "explanation": "'Contract' means to become smaller, the opposite of 'expand'."
+    },
+    {
+      "q": "Neither he nor I ___ responsible for the delay.",
+      "options": [
+        "is",
+        "are",
+        "am",
+        "be"
+      ],
+      "answer": 2,
+      "explanation": "With 'neither...nor', the verb agrees with the nearer subject 'I', so 'am' is correct."
+    },
+    {
+      "q": "Choose the correct meaning of the idiom 'once in a blue moon':",
+      "options": [
+        "rarely",
+        "every night",
+        "at noon",
+        "very loudly"
+      ],
+      "answer": 0,
+      "explanation": "'Once in a blue moon' means something that happens very rarely."
+    },
+    {
+      "q": "She ___ to school every day.",
+      "options": [
+        "go",
+        "goes",
+        "going",
+        "gone"
+      ],
+      "answer": 1,
+      "explanation": "With the third-person singular subject 'she' in the present simple, the verb takes '-es'."
+    }
+  ]
+}

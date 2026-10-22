@@ -1,0 +1,115 @@
+{
+  "bank": "hbl",
+  "questions": [
+    {
+      "q": "Find the next number in the series: 2, 4, 8, 16, ___",
+      "options": [
+        "32",
+        "24",
+        "30",
+        "20"
+      ],
+      "answer": 0,
+      "explanation": "Each number is doubled to get the next: 16 x 2 = 32."
+    },
+    {
+      "q": "Book is to Pages as Wall is to ___",
+      "options": [
+        "paint",
+        "bricks",
+        "door",
+        "cement"
+      ],
+      "answer": 1,
+      "explanation": "A book is made up of pages, just as a wall is made up of bricks."
+    },
+    {
+      "q": "Find the odd one out:",
+      "options": [
+        "Apple",
+        "Mango",
+        "Banana",
+        "Carrot"
+      ],
+      "answer": 3,
+      "explanation": "Apple, mango and banana are fruits, while carrot is a vegetable."
+    },
+    {
+      "q": "Find the next letter in the series: A, C, F, J, ___",
+      "options": [
+        "L",
+        "M",
+        "O",
+        "N"
+      ],
+      "answer": 2,
+      "explanation": "The gaps increase by one each time (+2, +3, +4), so J + 5 = O."
+    },
+    {
+      "q": "If 5 workers can build a wall in 12 days, how long will 6 workers take?",
+      "options": [
+        "8 days",
+        "10 days",
+        "12 days",
+        "15 days"
+      ],
+      "answer": 1,
+      "explanation": "Total work = 5 x 12 = 60 worker-days. 60 / 6 = 10 days."
+    },
+    {
+      "q": "If CAT is coded as 24 (3 + 1 + 20), what is DOG coded as?",
+      "options": [
+        "26",
+        "25",
+        "27",
+        "24"
+      ],
+      "answer": 0,
+      "explanation": "DOG = 4 + 15 + 7 = 26."
+    },
+    {
+      "q": "Doctor is to Hospital as Teacher is to ___",
+      "options": [
+        "office",
+        "court",
+        "school",
+        "farm"
+      ],
+      "answer": 2,
+      "explanation": "A doctor works in a hospital, just as a teacher works in a school."
+    },
+    {
+      "q": "Find the next number in the series: 3, 6, 11, 18, 27, ___",
+      "options": [
+        "36",
+        "38",
+        "40",
+        "35"
+      ],
+      "answer": 1,
+      "explanation": "The gaps increase by 2 each time (+3, +5, +7, +9), so 27 + 11 = 38."
+    },
+    {
+      "q": "Find the odd one out: 121, 144, 169, 190",
+      "options": [
+        "121",
+        "144",
+        "169",
+        "190"
+      ],
+      "answer": 3,
+      "explanation": "121, 144 and 169 are perfect squares (11^2, 12^2, 13^2); 190 is not."
+    },
+    {
+      "q": "All managers are employees. Ahmed is a manager. What follows?",
+      "options": [
+        "Ahmed is an employee",
+        "Ahmed is not an employee",
+        "Nothing can be said",
+        "Ahmed is the CEO"
+      ],
+      "answer": 0,
+      "explanation": "Since Ahmed belongs to the group 'managers' and all managers are employees, Ahmed must be an employee."
+    }
+  ]
+}

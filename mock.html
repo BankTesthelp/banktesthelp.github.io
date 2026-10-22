@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Full Full Test — 50 Questions, 60 Minutes | BankTest.pk</title>
+<meta name="description" content="Take a free full-length bank test mock exam: 50 mixed questions across 6 sections with a 60-minute timer and section-wise score breakdown.">
+<!-- AD: paste the Google AdSense script here once approved. See config.js for full setup instructions. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=3">
+<link rel="canonical" href="https://muse.ai/s/bank-test-preparation-website-fxi6cxelxiuqxsxb/mock.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BankTest.pk">
+<meta property="og:title" content="Full Full Test — 50 Questions, 60 Minutes | BankTest.pk">
+<meta property="og:description" content="Take a free full-length bank test mock exam: 50 mixed questions across 6 sections with a 60-minute timer and section-wise score breakdown.">
+<meta property="og:url" content="https://muse.ai/s/bank-test-preparation-website-fxi6cxelxiuqxsxb/mock.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Full Full Test — 50 Questions, 60 Minutes | BankTest.pk">
+<meta name="twitter:description" content="Take a free full-length bank test mock exam: 50 mixed questions across 6 sections with a 60-minute timer and section-wise score breakdown.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"BankTest.pk","url":"https://muse.ai/s/bank-test-preparation-website-fxi6cxelxiuqxsxb","description":"Take a free full-length bank test mock exam: 50 mixed questions across 6 sections with a 60-minute timer and section-wise score breakdown.","publisher":{"@type":"Organization","name":"BankTest.pk"}}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3730427484853115" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">BankTest<span>.pk</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="topics.html">Topics</a>
+      <a href="quiz.html?bank=nbp&amp;topic=english&amp;count=15">Quizzes</a>
+      <a href="mock.html">Full Test</a>
+      <a href="preparation-guide.html">Prep Guide</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="container section">
+    <div class="quiz-wrap" style="max-width:960px">
+
+      <!-- Start screen -->
+      <div id="mockStart" class="quiz-start">
+        <h1>Full Full Test</h1>
+        <p class="quiz-meta" id="mockInfo"></p>
+        <p>Choose a bank to begin. Questions are drawn from all six sections: English, Mathematics, IQ &amp; Analytical Reasoning, General Knowledge, Current Affairs, and Banking &amp; Finance.</p>
+        <div class="bank-pick" id="bankPick"></div>
+        <div class="note-box info"><strong>How it works:</strong> you get 60 minutes for 50 questions. You can move between questions with the navigator, change answers any time, and submit early. Your score is broken down by section at the end.</div>
+      </div>
+
+      <!-- Test screen -->
+      <div id="mockTest" class="hidden">
+        <div class="timer" id="mockTimer">Time left: 60:00</div>
+        <div class="mock-layout">
+          <div class="mock-main">
+            <p class="q-counter"><span id="mockQCounter"></span> · <span id="mockQTopic"></span></p>
+            <h2 class="q-text" id="mockQText"></h2>
+            <div class="options" id="mockOptions"></div>
+            <div class="quiz-nav" style="justify-content:space-between">
+              <button type="button" class="btn btn-outline" style="border-color:var(--green);color:var(--green)" id="mockPrev">Previous</button>
+              <button type="button" class="btn btn-green" id="mockNext">Next</button>
+            </div>
+          </div>
+          <aside class="mock-side">
+            <h3>Navigator</h3>
+            <p class="q-counter" id="mockProgress"></p>
+            <div class="nav-grid" id="navGrid"></div>
+            <button type="button" class="btn btn-green btn-block" id="mockSubmit">Submit Test</button>
+          </aside>
+        </div>
+      </div>
+
+      <!-- Results screen -->
+      <div id="mockResults" class="hidden results">
+        <h2>Full Test Results</h2>
+        <div class="score-big" id="mockScoreBig">0%</div>
+        <p id="mockScoreDetail"></p>
+        <p id="mockVerdict"></p>
+
+        <!-- AD PLACEHOLDER: paste your AdSense ad unit <ins> code inside this div. Setup instructions in config.js. -->
+        <div class="ad-slot"><span class="ad-label">Advertisement</span></div>
+
+        <h2 class="text-center">Section-wise Breakdown</h2>
+        <div class="table-wrap">
+          <table class="pattern-table" id="sectionTable"></table>
+        </div>
+
+        <div class="quiz-actions">
+          <button type="button" class="btn btn-green" id="mockRetake">Retake Full Test</button>
+          <a class="btn btn-outline" style="border-color:var(--green);color:var(--green)" href="topics.html">Practice by Topic</a>
+        </div>
+
+        <h2 class="text-center">Review Your Answers</h2>
+        <div class="review-list" id="mockReview"></div>
+      </div>
+
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <a class="brand" href="index.html">BankTest<span>.pk</span></a>
+      <p>Free Pakistan bank test preparation — practice quizzes, full tests and guides. All questions are original practice material.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Banks</h3>
+      <ul>
+        <li><a href="nbp.html">NBP</a></li><li><a href="sbp.html">SBP</a></li><li><a href="hbl.html">HBL</a></li><li><a href="mcb.html">MCB</a></li><li><a href="ubl.html">UBL</a></li><li><a href="meezan.html">Meezan Bank</a></li><li><a href="allied.html">Allied Bank</a></li><li><a href="bop.html">Bank of Punjab</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Topics</h3>
+      <ul>
+        <li><a href="quiz.html?bank=nbp&amp;topic=english&amp;count=15">English Quiz</a></li>
+        <li><a href="quiz.html?bank=nbp&amp;topic=math&amp;count=15">Math Quiz</a></li>
+        <li><a href="quiz.html?bank=nbp&amp;topic=iq&amp;count=15">IQ &amp; Reasoning Quiz</a></li>
+        <li><a href="quiz.html?bank=nbp&amp;topic=gk&amp;count=15">General Knowledge Quiz</a></li>
+        <li><a href="quiz.html?bank=nbp&amp;topic=current-affairs&amp;count=15">Current Affairs Quiz</a></li>
+        <li><a href="quiz.html?bank=nbp&amp;topic=banking&amp;count=15">Banking Quiz</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="disclaimer.html">Disclaimer</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> BankTest.pk — All rights reserved.</p>
+      <p class="footer-note">BankTest.pk is an independent practice website and is not affiliated with any bank, NTS, PTS, OTS or IBP.</p>
+    </div>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script src="main.js"></script>
+<script src="mock.js"></script>
+</body>
+</html>

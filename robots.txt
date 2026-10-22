@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hamzaumrani3366336633-boop.github.io/sitemap.xml

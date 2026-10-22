@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Practice Quiz — BankTest.pk</title>
+<meta name="description" content="Take a free timed-style Pakistan bank test practice quiz with instant feedback, detailed explanations for every question, and a 60% pass score.">
+<!-- AD: paste the Google AdSense script here once approved. See config.js for full setup instructions. -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css?v=3">
+<link rel="canonical" href="https://muse.ai/s/bank-test-preparation-website-fxi6cxelxiuqxsxb/quiz.html">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="BankTest.pk">
+<meta property="og:title" content="Practice Quiz — BankTest.pk">
+<meta property="og:description" content="Take a free timed-style Pakistan bank test practice quiz with instant feedback, detailed explanations for every question, and a 60% pass score.">
+<meta property="og:url" content="https://muse.ai/s/bank-test-preparation-website-fxi6cxelxiuqxsxb/quiz.html">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Practice Quiz — BankTest.pk">
+<meta name="twitter:description" content="Take a free timed-style Pakistan bank test practice quiz with instant feedback, detailed explanations for every question, and a 60% pass score.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"BankTest.pk","url":"https://muse.ai/s/bank-test-preparation-website-fxi6cxelxiuqxsxb","description":"Take a free timed-style Pakistan bank test practice quiz with instant feedback, detailed explanations for every question, and a 60% pass score.","publisher":{"@type":"Organization","name":"BankTest.pk"}}
+</script>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3730427484853115" crossorigin="anonymous"></script>
+</head>
+<body>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">BankTest<span>.pk</span></a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">&#9776;</button>
+    <nav class="site-nav" id="siteNav" aria-label="Main navigation">
+      <a href="index.html">Home</a>
+      <a href="topics.html">Topics</a>
+      <a href="quiz.html?bank=nbp&amp;topic=english&amp;count=15">Quizzes</a>
+      <a href="mock.html">Full Test</a>
+      <a href="preparation-guide.html">Prep Guide</a>
+      <a href="about.html">About</a>
+    </nav>
+  </div>
+</header>
+<main>
+  <div class="container section">
+    <div class="quiz-wrap">
+
+      <!-- Start screen -->
+      <div id="quizStart" class="quiz-start">
+        <h1 id="quizTopicName">Practice Quiz</h1>
+        <p class="quiz-meta"><span id="quizBankName"></span></p>
+        <p class="quiz-meta" id="quizCountInfo"></p>
+        <button type="button" class="btn btn-green btn-block" id="quizStartBtn">Start Quiz</button>
+        <p class="mt-2"><a href="topics.html">Choose a different topic</a></p>
+      </div>
+
+      <!-- Question screen -->
+      <div id="quizQuestion" class="hidden">
+        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        <p class="q-counter"><span id="qCounter"></span> · <span id="qTopicTag"></span></p>
+        <h2 class="q-text" id="qText"></h2>
+        <div class="options" id="optionsBox"></div>
+        <div class="explanation hidden" id="explanationBox"></div>
+        <div class="quiz-nav">
+          <button type="button" class="btn btn-green hidden" id="nextBtn">Next Question</button>
+        </div>
+      </div>
+
+      <!-- Results screen -->
+      <div id="quizResults" class="hidden results">
+        <h2>Your Results</h2>
+        <div class="score-big" id="scoreBig">0%</div>
+        <p id="scoreDetail"></p>
+        <p id="scoreVerdict"></p>
+
+        <!-- AD PLACEHOLDER: paste your AdSense ad unit <ins> code inside this div. Setup instructions in config.js. -->
+        <div class="ad-slot"><span class="ad-label">Advertisement</span></div>
+
+        <div class="quiz-actions">
+          <button type="button" class="btn btn-green" id="retakeBtn">Retake Quiz</button>
+          <a class="btn btn-outline" style="border-color:var(--green);color:var(--green)" href="topics.html">More Topics</a>
+          <a class="btn btn-outline" style="border-color:var(--green);color:var(--green)" href="mock.html">Try a Full Full Test</a>
+        </div>
+
+        <h2 class="text-center">Review Your Answers</h2>
+        <div class="review-list" id="reviewList"></div>
+      </div>
+
+    </div>
+  </div>
+</main>
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-col">
+      <a class="brand" href="index.html">BankTest<span>.pk</span></a>
+      <p>Free Pakistan bank test preparation — practice quizzes, full tests and guides. All questions are original practice material.</p>
+    </div>
+    <div class="footer-col">
+      <h3>Banks</h3>
+      <ul>
+        <li><a href="nbp.html">NBP</a></li><li><a href="sbp.html">SBP</a></li><li><a href="hbl.html">HBL</a></li><li><a href="mcb.html">MCB</a></li><li><a href="ubl.html">UBL</a></li><li><a href="meezan.html">Meezan Bank</a></li><li><a href="allied.html">Allied Bank</a></li><li><a href="bop.html">Bank of Punjab</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Topics</h3>
+      <ul>
+        <li><a href="quiz.html?bank=nbp&amp;topic=english&amp;count=15">English Quiz</a></li>
+        <li><a href="quiz.html?bank=nbp&amp;topic=math&amp;count=15">Math Quiz</a></li>
+        <li><a href="quiz.html?bank=nbp&amp;topic=iq&amp;count=15">IQ &amp; Reasoning Quiz</a></li>
+        <li><a href="quiz.html?bank=nbp&amp;topic=gk&amp;count=15">General Knowledge Quiz</a></li>
+        <li><a href="quiz.html?bank=nbp&amp;topic=current-affairs&amp;count=15">Current Affairs Quiz</a></li>
+        <li><a href="quiz.html?bank=nbp&amp;topic=banking&amp;count=15">Banking Quiz</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h3>Legal</h3>
+      <ul>
+        <li><a href="about.html">About</a></li><li><a href="contact.html">Contact</a></li><li><a href="privacy-policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Use</a></li><li><a href="disclaimer.html">Disclaimer</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <p>&copy; <span id="year">2026</span> BankTest.pk — All rights reserved.</p>
+      <p class="footer-note">BankTest.pk is an independent practice website and is not affiliated with any bank, NTS, PTS, OTS or IBP.</p>
+    </div>
+  </div>
+</footer>
+<script src="config.js"></script>
+<script src="main.js"></script>
+<script src="quiz.js"></script>
+</body>
+</html>

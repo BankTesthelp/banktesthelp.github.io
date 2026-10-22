@@ -1,0 +1,10 @@
+{
+  "frameCount": 96,
+  "frameWidth": 480,
+  "frameHeight": 270,
+  "cols": 13,
+  "rows": 8,
+  "spriteWidth": 6240,
+  "spriteHeight": 2160,
+  "sprite": "lion-sprite-96.webp"
+}

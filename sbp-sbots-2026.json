@@ -1,0 +1,725 @@
+{
+  "bank": "sbp",
+  "questions": [
+    {
+      "q": "Choose the grammatically correct sentence:",
+      "options": [
+        "She has been working here since 2020.",
+        "She have been working here since 2020.",
+        "She is working here since 2020.",
+        "She has being working here since 2020."
+      ],
+      "answer": 0,
+      "explanation": "With 'since 2020', use the present perfect continuous: has/have been + verb-ing.",
+      "sub": "English"
+    },
+    {
+      "q": "Choose the word closest in meaning to 'Diligent':",
+      "options": [
+        "Lazy",
+        "Industrious",
+        "Careless",
+        "Slow"
+      ],
+      "answer": 1,
+      "explanation": "Diligent means hardworking; 'industrious' is its closest synonym.",
+      "sub": "English"
+    },
+    {
+      "q": "Choose the word opposite in meaning to 'Scarce':",
+      "options": [
+        "Rare",
+        "Short",
+        "Abundant",
+        "Limited"
+      ],
+      "answer": 2,
+      "explanation": "Scarce means rare or in short supply; its opposite is abundant (plentiful).",
+      "sub": "English"
+    },
+    {
+      "q": "Fill in the blank: The committee ___ submitted its report.",
+      "options": [
+        "have",
+        "are",
+        "were",
+        "has"
+      ],
+      "answer": 3,
+      "explanation": "'Committee' is treated as singular here, so it takes the singular verb 'has'.",
+      "sub": "English"
+    },
+    {
+      "q": "Choose the correctly spelled word:",
+      "options": [
+        "Occasion",
+        "Occassion",
+        "Ocassion",
+        "Ocasion"
+      ],
+      "answer": 0,
+      "explanation": "The correct spelling is O-C-C-A-S-I-O-N.",
+      "sub": "English"
+    },
+    {
+      "q": "Find the error in: 'Neither of the two candidates are suitable.'",
+      "options": [
+        "Neither",
+        "are",
+        "of the two",
+        "suitable"
+      ],
+      "answer": 1,
+      "explanation": "'Neither' is singular, so the verb must be 'is', not 'are'.",
+      "sub": "English"
+    },
+    {
+      "q": "The idiom 'to bite the dust' means:",
+      "options": [
+        "To eat quickly",
+        "To work very hard",
+        "To fail or be defeated",
+        "To travel far"
+      ],
+      "answer": 2,
+      "explanation": "It comes from fallen riders in battle — it means to suffer defeat or failure.",
+      "sub": "English"
+    },
+    {
+      "q": "One word for 'a person who speaks many languages':",
+      "options": [
+        "Orator",
+        "Linguist",
+        "Speaker",
+        "Polyglot"
+      ],
+      "answer": 3,
+      "explanation": "A polyglot knows or uses several languages.",
+      "sub": "English"
+    },
+    {
+      "q": "Choose the correct passive form of 'The manager approved the loan.':",
+      "options": [
+        "The loan was approved by the manager.",
+        "The loan is approved by the manager.",
+        "The loan has approved by the manager.",
+        "The loan had approve by the manager."
+      ],
+      "answer": 0,
+      "explanation": "Past simple active becomes was/were + past participle in the passive voice.",
+      "sub": "English"
+    },
+    {
+      "q": "Choose the word opposite in meaning to 'Frugal':",
+      "options": [
+        "Thrifty",
+        "Wasteful",
+        "Economical",
+        "Careful"
+      ],
+      "answer": 1,
+      "explanation": "Frugal means economical with money; its opposite is wasteful (extravagant).",
+      "sub": "English"
+    },
+    {
+      "q": "Fill in the blank: He is good ___ mathematics.",
+      "options": [
+        "in",
+        "for",
+        "at",
+        "with"
+      ],
+      "answer": 2,
+      "explanation": "The correct preposition with 'good' (meaning skilled) is 'at'.",
+      "sub": "English"
+    },
+    {
+      "q": "Choose the word closest in meaning to 'Candid':",
+      "options": [
+        "Rude",
+        "Secretive",
+        "Clever",
+        "Frank"
+      ],
+      "answer": 3,
+      "explanation": "Candid means frank, honest and outspoken.",
+      "sub": "English"
+    },
+    {
+      "q": "Complete the sentence: 'Hardly had he finished ___ the phone rang.'",
+      "options": [
+        "when",
+        "than",
+        "then",
+        "that"
+      ],
+      "answer": 0,
+      "explanation": "'Hardly/Scarcely had' is always paired with 'when'.",
+      "sub": "English"
+    },
+    {
+      "q": "The word 'Benevolent' means:",
+      "options": [
+        "Strict and harsh",
+        "Kind and generous",
+        "Wealthy",
+        "Famous"
+      ],
+      "answer": 1,
+      "explanation": "Benevolent describes someone kind, generous and well-meaning.",
+      "sub": "English"
+    },
+    {
+      "q": "Find the error in: 'She don't like tea.'",
+      "options": [
+        "She",
+        "like",
+        "don't",
+        "tea"
+      ],
+      "answer": 2,
+      "explanation": "With third-person singular 'she', the verb must be 'doesn't', not 'don't'.",
+      "sub": "English"
+    },
+    {
+      "q": "The idiom 'to break the ice' means:",
+      "options": [
+        "To end a quarrel",
+        "To feel very cold",
+        "To break the rules",
+        "To start a conversation"
+      ],
+      "answer": 3,
+      "explanation": "It means to do or say something to relieve tension and get people talking.",
+      "sub": "English"
+    },
+    {
+      "q": "What is the plural of 'Criterion'?",
+      "options": [
+        "Criteria",
+        "Criterions",
+        "Criterias",
+        "Criterionies"
+      ],
+      "answer": 0,
+      "explanation": "'Criterion' comes from Greek; its plural is 'criteria'.",
+      "sub": "English"
+    },
+    {
+      "q": "Fill in the blank: 'Each of the students ___ a laptop.'",
+      "options": [
+        "have",
+        "has",
+        "are having",
+        "were have"
+      ],
+      "answer": 1,
+      "explanation": "'Each' is singular, so it takes the singular verb 'has'.",
+      "sub": "English"
+    },
+    {
+      "q": "Choose the word closest in meaning to 'Adept':",
+      "options": [
+        "Clumsy",
+        "Slow",
+        "Skilled",
+        "Tired"
+      ],
+      "answer": 2,
+      "explanation": "Adept means highly skilled or proficient at something.",
+      "sub": "English"
+    },
+    {
+      "q": "Choose the word opposite in meaning to 'Expand':",
+      "options": [
+        "Grow",
+        "Extend",
+        "Enlarge",
+        "Contract"
+      ],
+      "answer": 3,
+      "explanation": "Expand means to grow larger; its opposite is contract (to shrink).",
+      "sub": "English"
+    },
+    {
+      "q": "Find the next number in the series: 3, 6, 12, 24, ?",
+      "options": [
+        "48",
+        "36",
+        "42",
+        "60"
+      ],
+      "answer": 0,
+      "explanation": "Each number doubles (×2 pattern), so 24 × 2 = 48.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "Which word does not belong with the others?",
+      "options": [
+        "Rose",
+        "Oak",
+        "Lotus",
+        "Marigold"
+      ],
+      "answer": 1,
+      "explanation": "Rose, Lotus and Marigold are flowers; Oak is a tree.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "If CAT = 24 (C=3, A=1, T=20, and 3+1+20 = 24), what is BAT?",
+      "options": [
+        "22",
+        "24",
+        "23",
+        "25"
+      ],
+      "answer": 2,
+      "explanation": "Add the letter positions: B(2) + A(1) + T(20) = 23.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "Statements: All banks are financial institutions. Some financial institutions are regulated by SBP. Which conclusion follows?",
+      "options": [
+        "All banks are regulated by SBP",
+        "Some banks are regulated by SBP",
+        "No bank is regulated by SBP",
+        "No definite conclusion can be drawn"
+      ],
+      "answer": 3,
+      "explanation": "The statements never link 'banks' to 'regulated', so nothing definite follows about banks.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "A is taller than B. B is taller than C. Who is the shortest?",
+      "options": [
+        "C",
+        "A",
+        "B",
+        "Cannot be determined"
+      ],
+      "answer": 0,
+      "explanation": "The order is A > B > C, so C is the shortest.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "Find the next number in the series: 2, 5, 10, 17, 26, ?",
+      "options": [
+        "35",
+        "37",
+        "36",
+        "38"
+      ],
+      "answer": 1,
+      "explanation": "The differences grow by 2 (3, 5, 7, 9…); the next difference is 11, so 26 + 11 = 37.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "If WATER = 67 (23+1+20+5+18), what is FIRE?",
+      "options": [
+        "36",
+        "40",
+        "38",
+        "42"
+      ],
+      "answer": 2,
+      "explanation": "Add the letter positions: F(6) + I(9) + R(18) + E(5) = 38.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "Which number does not belong? 121, 144, 169, 190",
+      "options": [
+        "121",
+        "144",
+        "169",
+        "190"
+      ],
+      "answer": 3,
+      "explanation": "121 = 11², 144 = 12² and 169 = 13² are perfect squares; 190 is not.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "If yesterday was Friday, what day is the day after tomorrow?",
+      "options": [
+        "Monday",
+        "Sunday",
+        "Tuesday",
+        "Saturday"
+      ],
+      "answer": 0,
+      "explanation": "Today is Saturday and tomorrow is Sunday, so the day after tomorrow is Monday.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "Find the next letter in the series: A, D, G, J, ?",
+      "options": [
+        "K",
+        "M",
+        "L",
+        "N"
+      ],
+      "answer": 1,
+      "explanation": "Each step moves three letters forward (+3): J + 3 = M.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "Statements: All managers are leaders. Some leaders are mentors. Which conclusion follows?",
+      "options": [
+        "All managers are mentors",
+        "Some managers are mentors",
+        "No definite conclusion follows",
+        "No manager is a mentor"
+      ],
+      "answer": 2,
+      "explanation": "The statements do not connect 'managers' to 'mentors', so nothing definite follows.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "Find the next number in the series: 5, 11, 23, 47, ?",
+      "options": [
+        "93",
+        "94",
+        "96",
+        "95"
+      ],
+      "answer": 3,
+      "explanation": "The pattern is ×2 + 1: 47 × 2 + 1 = 95.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "Which one is different? Pen, Pencil, Eraser, Book",
+      "options": [
+        "Book",
+        "Pen",
+        "Pencil",
+        "Eraser"
+      ],
+      "answer": 0,
+      "explanation": "Pen, pencil and eraser are writing instruments; a book is for reading.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "If 1 = 3, 2 = 6 and 3 = 9, then 5 = ?",
+      "options": [
+        "12",
+        "15",
+        "13",
+        "14"
+      ],
+      "answer": 1,
+      "explanation": "Each number is multiplied by 3: 5 × 3 = 15.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "Ali walks 4 km north and then 3 km east. How far is he from his starting point?",
+      "options": [
+        "6 km",
+        "7 km",
+        "5 km",
+        "8 km"
+      ],
+      "answer": 2,
+      "explanation": "The two legs form a right triangle: √(4² + 3²) = √25 = 5 km.",
+      "sub": "Analytical Reasoning"
+    },
+    {
+      "q": "The State Bank of Pakistan was established in:",
+      "options": [
+        "1948",
+        "1947",
+        "1949",
+        "1950"
+      ],
+      "answer": 0,
+      "explanation": "The State Bank of Pakistan was established on 1 July 1948.",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "Who was the first Governor of the State Bank of Pakistan?",
+      "options": [
+        "Abdul Hafeez Pirzada",
+        "Zahid Hussain",
+        "Ishrat Husain",
+        "Yaseen Anwar"
+      ],
+      "answer": 1,
+      "explanation": "Zahid Hussain became the first Governor of SBP in 1948.",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "The national currency of Pakistan is the:",
+      "options": [
+        "Taka",
+        "Dinar",
+        "Rupee",
+        "Riyal"
+      ],
+      "answer": 2,
+      "explanation": "Pakistan's national currency is the Pakistani Rupee (PKR).",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "Which is the largest dam in Pakistan by water storage capacity?",
+      "options": [
+        "Mangla",
+        "Warsak",
+        "Diamer-Bhasha",
+        "Tarbela"
+      ],
+      "answer": 3,
+      "explanation": "Tarbela Dam on the Indus River has the largest live storage capacity in Pakistan.",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "Which city of Pakistan is known as the 'City of Lights'?",
+      "options": [
+        "Karachi",
+        "Lahore",
+        "Islamabad",
+        "Peshawar"
+      ],
+      "answer": 0,
+      "explanation": "Karachi earned the title for its vibrant, never-sleeping nightlife.",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "Pakistan conducted its nuclear tests in:",
+      "options": [
+        "1996",
+        "1998",
+        "1997",
+        "1999"
+      ],
+      "answer": 1,
+      "explanation": "Pakistan's nuclear tests (Youm-e-Takbeer) were conducted on 28 May 1998.",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "The Indus Waters Treaty between Pakistan and India was signed in:",
+      "options": [
+        "1955",
+        "1965",
+        "1960",
+        "1971"
+      ],
+      "answer": 2,
+      "explanation": "The Indus Waters Treaty was signed in Karachi in September 1960.",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "SAARC was founded in the year:",
+      "options": [
+        "1980",
+        "1990",
+        "1995",
+        "1985"
+      ],
+      "answer": 3,
+      "explanation": "The South Asian Association for Regional Cooperation was founded in Dhaka in 1985.",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "The currency of Japan is the:",
+      "options": [
+        "Yen",
+        "Won",
+        "Yuan",
+        "Ringgit"
+      ],
+      "answer": 0,
+      "explanation": "The national currency of Japan is the Yen (¥).",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "Which is the largest ocean in the world?",
+      "options": [
+        "Atlantic",
+        "Pacific",
+        "Indian",
+        "Arctic"
+      ],
+      "answer": 1,
+      "explanation": "The Pacific Ocean covers about one-third of the Earth's surface.",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "Who was the first woman Prime Minister of Pakistan?",
+      "options": [
+        "Fatima Jinnah",
+        "Hina Rabbani Khar",
+        "Benazir Bhutto",
+        "Asma Jahangir"
+      ],
+      "answer": 2,
+      "explanation": "Benazir Bhutto became Prime Minister in 1988 — the first woman to head a Muslim-majority country.",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "The national animal of Pakistan is the:",
+      "options": [
+        "Lion",
+        "Snow leopard",
+        "Tiger",
+        "Markhor"
+      ],
+      "answer": 3,
+      "explanation": "The Markhor, a wild goat of the northern mountains, is Pakistan's national animal.",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "The Khyber Pass connects Pakistan with:",
+      "options": [
+        "Afghanistan",
+        "Iran",
+        "China",
+        "India"
+      ],
+      "answer": 0,
+      "explanation": "The historic Khyber Pass links Pakistan's Khyber Pakhtunkhwa with Afghanistan.",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "The United Nations was founded in:",
+      "options": [
+        "1948",
+        "1945",
+        "1950",
+        "1939"
+      ],
+      "answer": 1,
+      "explanation": "The UN Charter came into force on 24 October 1945.",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "Which planet is known as the Red Planet?",
+      "options": [
+        "Venus",
+        "Jupiter",
+        "Mars",
+        "Mercury"
+      ],
+      "answer": 2,
+      "explanation": "Mars appears red because of iron oxide (rust) on its surface.",
+      "sub": "GK & Current Affairs"
+    },
+    {
+      "q": "The primary function of a central bank is to:",
+      "options": [
+        "Issue currency and conduct monetary policy",
+        "Accept deposits from the public",
+        "Give car loans to citizens",
+        "Open branches in foreign countries"
+      ],
+      "answer": 0,
+      "explanation": "A central bank issues currency, sets monetary policy and regulates banks — it is not a commercial bank.",
+      "sub": "Banking & Economics"
+    },
+    {
+      "q": "When the State Bank raises its policy rate, borrowing in the economy becomes:",
+      "options": [
+        "Cheaper",
+        "More expensive",
+        "Interest-free",
+        "Unchanged"
+      ],
+      "answer": 1,
+      "explanation": "A higher policy rate raises banks' funding costs, so loans become costlier — this cools down inflation.",
+      "sub": "Banking & Economics"
+    },
+    {
+      "q": "Inflation means:",
+      "options": [
+        "A fall in prices",
+        "A rise in exports",
+        "A general rise in the price level",
+        "A fall in imports"
+      ],
+      "answer": 2,
+      "explanation": "Inflation is the sustained increase in the general price level, which reduces purchasing power.",
+      "sub": "Banking & Economics"
+    },
+    {
+      "q": "KIBOR stands for:",
+      "options": [
+        "Karachi Investment Banking Order",
+        "Khyber International Banking Office",
+        "Karachi Islamic Banking Ordinance",
+        "Karachi Inter-Bank Offered Rate"
+      ],
+      "answer": 3,
+      "explanation": "KIBOR is the benchmark rate at which banks lend to each other in Pakistan.",
+      "sub": "Banking & Economics"
+    },
+    {
+      "q": "GDP stands for:",
+      "options": [
+        "Gross Domestic Product",
+        "General Deposit Policy",
+        "Government Development Plan",
+        "Gross Debt Payment"
+      ],
+      "answer": 0,
+      "explanation": "GDP is the total value of goods and services produced in a country in a year.",
+      "sub": "Banking & Economics"
+    },
+    {
+      "q": "An uncrossed (open) cheque can be encashed:",
+      "options": [
+        "Only through a bank account",
+        "Over the counter in cash",
+        "Only by the payee's own bank",
+        "It can never be encashed"
+      ],
+      "answer": 1,
+      "explanation": "An open cheque is payable in cash across the counter; a crossed cheque must go through an account.",
+      "sub": "Banking & Economics"
+    },
+    {
+      "q": "The Banking Mohtasib in Pakistan deals with:",
+      "options": [
+        "Collection of taxes",
+        "Printing of currency notes",
+        "Customer complaints against banks",
+        "Trading of stocks"
+      ],
+      "answer": 2,
+      "explanation": "The Banking Mohtasib is the ombudsman that resolves bank customers' complaints against banks.",
+      "sub": "Banking & Economics"
+    },
+    {
+      "q": "Which system provides instant digital payments in Pakistan?",
+      "options": [
+        "NIFT",
+        "PLS",
+        "SWIFT",
+        "RAAST"
+      ],
+      "answer": 3,
+      "explanation": "RAAST is SBP's instant payment system for real-time, low-cost digital transfers.",
+      "sub": "Banking & Economics"
+    },
+    {
+      "q": "In Pakistan, fiscal policy is formulated by:",
+      "options": [
+        "The State Bank",
+        "Commercial banks",
+        "The IMF",
+        "The government (Finance Division)"
+      ],
+      "answer": 3,
+      "explanation": "Fiscal policy — taxation and public spending — is the government's domain; SBP handles monetary policy.",
+      "sub": "Banking & Economics"
+    },
+    {
+      "q": "In banking, 'NPL' refers to:",
+      "options": [
+        "New Private Loans",
+        "National Profit Ledger",
+        "Net Paid Liabilities",
+        "Non-Performing Loans"
+      ],
+      "answer": 3,
+      "explanation": "NPLs are loans on which borrowers have stopped paying — a key measure of a bank's health.",
+      "sub": "Banking & Economics"
+    }
+  ]
+}

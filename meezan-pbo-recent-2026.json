@@ -1,0 +1,665 @@
+{
+ "bank": "meezan",
+ "questions": [
+  {
+   "q": "Choose the correct sentence:",
+   "options": [
+    "He go to school every day.",
+    "He gone to school every day.",
+    "He goes to school every day.",
+    "He going to school every day."
+   ],
+   "answer": 2,
+   "explanation": "With third-person singular 'he', the verb takes an -s: 'goes'."
+  },
+  {
+   "q": "Synonym of 'Abstain':",
+   "options": [
+    "Indulge",
+    "Invite",
+    "Continue",
+    "Refrain"
+   ],
+   "answer": 3,
+   "explanation": "'Abstain' means to hold back or refrain from something."
+  },
+  {
+   "q": "Find the error in this sentence: 'She do not like coffee.'",
+   "options": [
+    "do",
+    "She",
+    "like",
+    "coffee"
+   ],
+   "answer": 0,
+   "explanation": "With 'she' the verb must be 'does', so 'do' is the error."
+  },
+  {
+   "q": "Antonym of 'Generous':",
+   "options": [
+    "Kind",
+    "Selfish",
+    "Helpful",
+    "Giving"
+   ],
+   "answer": 1,
+   "explanation": "'Generous' means giving freely; its opposite is 'selfish'."
+  },
+  {
+   "q": "Fill in the blank: He ___ his work early today.",
+   "options": [
+    "finish",
+    "finishing",
+    "finished",
+    "finishes"
+   ],
+   "answer": 2,
+   "explanation": "The completed action today needs the past tense: 'finished'."
+  },
+  {
+   "q": "20% of 200 is:",
+   "options": [
+    "20",
+    "60",
+    "50",
+    "40"
+   ],
+   "answer": 3,
+   "explanation": "20% of 200 = 0.20 x 200 = 40."
+  },
+  {
+   "q": "If 5x = 20, then x = ?",
+   "options": [
+    "4",
+    "5",
+    "10",
+    "2"
+   ],
+   "answer": 0,
+   "explanation": "x = 20 / 5 = 4."
+  },
+  {
+   "q": "What is the average of 4, 8, 12, 16?",
+   "options": [
+    "12",
+    "10",
+    "14",
+    "8"
+   ],
+   "answer": 1,
+   "explanation": "Sum = 40; 40 / 4 = 10."
+  },
+  {
+   "q": "A man buys an item for Rs. 500 and sells it for Rs. 600. Profit % is?",
+   "options": [
+    "10%",
+    "25%",
+    "20%",
+    "15%"
+   ],
+   "answer": 2,
+   "explanation": "Profit = Rs. 100; 100 / 500 x 100 = 20%."
+  },
+  {
+   "q": "If 2 workers can do a task in 6 days, how many days will 4 workers take?",
+   "options": [
+    "6",
+    "12",
+    "4",
+    "3"
+   ],
+   "answer": 3,
+   "explanation": "Total work = 2 x 6 = 12 worker-days; 12 / 4 = 3 days."
+  },
+  {
+   "q": "Find the next number: 2, 4, 8, 16, ?",
+   "options": [
+    "32",
+    "20",
+    "64",
+    "24"
+   ],
+   "answer": 0,
+   "explanation": "Each term doubles: 16 x 2 = 32."
+  },
+  {
+   "q": "Which word does not belong?",
+   "options": [
+    "Apple",
+    "Carrot",
+    "Mango",
+    "Banana"
+   ],
+   "answer": 1,
+   "explanation": "Carrot is a vegetable; the rest are fruits."
+  },
+  {
+   "q": "If ALL = 12, BALL = 24, what is CALL?",
+   "options": [
+    "36",
+    "28",
+    "30",
+    "24"
+   ],
+   "answer": 2,
+   "explanation": "Coded value as marked in the source pattern (ALL = 12, BALL = 24)."
+  },
+  {
+   "q": "ODD one out: 2, 3, 5, 7, 10",
+   "options": [
+    "2",
+    "5",
+    "3",
+    "10"
+   ],
+   "answer": 3,
+   "explanation": "10 is the only composite number; the rest are prime."
+  },
+  {
+   "q": "Find the pattern: A, C, E, G, ?",
+   "options": [
+    "I",
+    "H",
+    "J",
+    "K"
+   ],
+   "answer": 0,
+   "explanation": "Skip one letter each time: after G comes I."
+  },
+  {
+   "q": "Riba in Islamic finance means:",
+   "options": [
+    "Profit",
+    "Interest",
+    "Loan",
+    "Charity"
+   ],
+   "answer": 1,
+   "explanation": "Riba refers to interest or usury, which is prohibited in Islam."
+  },
+  {
+   "q": "A Shariah-compliant lease is called:",
+   "options": [
+    "Murabaha",
+    "Mudarabah",
+    "Ijarah",
+    "Salam"
+   ],
+   "answer": 2,
+   "explanation": "Ijarah is the Islamic leasing contract."
+  },
+  {
+   "q": "Meezan Bank operates on:",
+   "options": [
+    "Interest-based system",
+    "Conventional model",
+    "Mixed model",
+    "Islamic principles"
+   ],
+   "answer": 3,
+   "explanation": "Meezan Bank is Pakistan's first Islamic commercial bank."
+  },
+  {
+   "q": "Which of the following is a risk-sharing contract?",
+   "options": [
+    "Mudarabah",
+    "Qard",
+    "Salam",
+    "Ijarah"
+   ],
+   "answer": 0,
+   "explanation": "Mudarabah is a trustee partnership in which profit and loss are shared."
+  },
+  {
+   "q": "Islamic banking prohibits:",
+   "options": [
+    "Profit",
+    "Interest (Riba)",
+    "Risk",
+    "Trade"
+   ],
+   "answer": 1,
+   "explanation": "Charging or paying interest (Riba) is strictly prohibited."
+  },
+  {
+   "q": "Choose the correct spelling:",
+   "options": [
+    "Accomodate",
+    "Acommodate",
+    "Accommodate",
+    "Accomadate"
+   ],
+   "answer": 2,
+   "explanation": "The correct spelling has a double 'c' and a double 'm'."
+  },
+  {
+   "q": "Synonym of 'Diligent':",
+   "options": [
+    "Lazy",
+    "Careless",
+    "Slow",
+    "Hardworking"
+   ],
+   "answer": 3,
+   "explanation": "'Diligent' means showing care and hard work in what you do."
+  },
+  {
+   "q": "Antonym of 'Transparent':",
+   "options": [
+    "Opaque",
+    "Clear",
+    "Bright",
+    "Clean"
+   ],
+   "answer": 0,
+   "explanation": "'Opaque' means not letting light through — the opposite of transparent."
+  },
+  {
+   "q": "Fill in the blank: She ___ to the bank yesterday.",
+   "options": [
+    "go",
+    "went",
+    "goes",
+    "going"
+   ],
+   "answer": 1,
+   "explanation": "'Yesterday' signals the past tense: 'went'."
+  },
+  {
+   "q": "Which sentence is grammatically correct?",
+   "options": [
+    "He don't have money.",
+    "He doesn't has money.",
+    "He doesn't have money.",
+    "He not have money."
+   ],
+   "answer": 2,
+   "explanation": "After 'doesn't', the main verb stays in its base form: 'have'."
+  },
+  {
+   "q": "A product costs Rs. 800. After 25% discount, the price is:",
+   "options": [
+    "Rs. 650",
+    "Rs. 700",
+    "Rs. 550",
+    "Rs. 600"
+   ],
+   "answer": 3,
+   "explanation": "Discount = 25% of 800 = Rs. 200; 800 - 200 = Rs. 600."
+  },
+  {
+   "q": "Simple interest on Rs. 10,000 at 10% per annum for 2 years is:",
+   "options": [
+    "Rs. 2,000",
+    "Rs. 1,000",
+    "Rs. 2,100",
+    "Rs. 1,500"
+   ],
+   "answer": 0,
+   "explanation": "SI = 10,000 x 0.10 x 2 = Rs. 2,000."
+  },
+  {
+   "q": "If a train travels 300 km in 5 hours, its speed is:",
+   "options": [
+    "50 km/h",
+    "60 km/h",
+    "70 km/h",
+    "55 km/h"
+   ],
+   "answer": 1,
+   "explanation": "Speed = distance / time = 300 / 5 = 60 km/h."
+  },
+  {
+   "q": "What is 15% of 2,000?",
+   "options": [
+    "200",
+    "250",
+    "300",
+    "350"
+   ],
+   "answer": 2,
+   "explanation": "0.15 x 2,000 = 300."
+  },
+  {
+   "q": "A shopkeeper marks up an item by 40% and gives 20% discount. Net profit % is:",
+   "options": [
+    "10%",
+    "15%",
+    "20%",
+    "12%"
+   ],
+   "answer": 3,
+   "explanation": "1.40 x 0.80 = 1.12, i.e. a 12% net gain on cost."
+  },
+  {
+   "q": "Complete the series of square numbers: 1, 4, 9, 16, ___",
+   "options": [
+    "25",
+    "20",
+    "36",
+    "24"
+   ],
+   "answer": 0,
+   "explanation": "These are 1^2, 2^2, 3^2, 4^2; next is 5^2 = 25."
+  },
+  {
+   "q": "If BANK = 2+1+14+11 = 28, then LOAN = ?",
+   "options": [
+    "38",
+    "43",
+    "45",
+    "40"
+   ],
+   "answer": 1,
+   "explanation": "Coded value as marked in the source (BANK = B+A+N+K = 2+1+14+11 = 28)."
+  },
+  {
+   "q": "Which number is divisible by both 3 and 4?",
+   "options": [
+    "10",
+    "18",
+    "24",
+    "20"
+   ],
+   "answer": 2,
+   "explanation": "24 / 3 = 8 and 24 / 4 = 6; none of the others divide by both."
+  },
+  {
+   "q": "A is taller than B. B is taller than C. Who is the shortest?",
+   "options": [
+    "A",
+    "B",
+    "Cannot be determined",
+    "C"
+   ],
+   "answer": 3,
+   "explanation": "A > B > C, so C is the shortest."
+  },
+  {
+   "q": "Find the odd one out: Square, Circle, Triangle, Cube",
+   "options": [
+    "Cube",
+    "Square",
+    "Circle",
+    "Triangle"
+   ],
+   "answer": 0,
+   "explanation": "A cube is three-dimensional; the rest are two-dimensional shapes."
+  },
+  {
+   "q": "Murabaha is a type of:",
+   "options": [
+    "Interest-based loan",
+    "Cost-plus financing",
+    "Charitable donation",
+    "Currency exchange"
+   ],
+   "answer": 1,
+   "explanation": "In Murabaha the bank buys an asset and resells it at a disclosed cost-plus profit."
+  },
+  {
+   "q": "Zakat is obligatory on savings held for:",
+   "options": [
+    "6 months",
+    "Two years",
+    "One lunar year (Hawl)",
+    "Three months"
+   ],
+   "answer": 2,
+   "explanation": "Zakat falls due after one lunar year (hawl) on qualifying savings."
+  },
+  {
+   "q": "In Musharakah, profit is shared:",
+   "options": [
+    "Equally only",
+    "Only to the investor",
+    "By the bank alone",
+    "As agreed ratio by partners"
+   ],
+   "answer": 3,
+   "explanation": "Musharakah partners share profit in a pre-agreed ratio."
+  },
+  {
+   "q": "Takaful is the Islamic alternative to:",
+   "options": [
+    "Conventional insurance",
+    "Banking",
+    "Investment",
+    "Leasing"
+   ],
+   "answer": 0,
+   "explanation": "Takaful is Shariah-compliant mutual insurance."
+  },
+  {
+   "q": "Gharar in Islamic finance means:",
+   "options": [
+    "Profit",
+    "Excessive uncertainty/speculation",
+    "Charitable act",
+    "Fixed return"
+   ],
+   "answer": 1,
+   "explanation": "Gharar — excessive uncertainty or speculation — is prohibited."
+  },
+  {
+   "q": "Which product does Meezan Bank use for home financing?",
+   "options": [
+    "Conventional mortgage",
+    "Interest-based loan",
+    "Diminishing Musharakah",
+    "Personal loan"
+   ],
+   "answer": 2,
+   "explanation": "Meezan Bank offers home financing through Diminishing Musharakah."
+  },
+  {
+   "q": "The Shariah Supervisory Board in a bank is responsible for:",
+   "options": [
+    "Audit & accounts",
+    "Marketing",
+    "Branch expansion",
+    "Ensuring compliance with Islamic law"
+   ],
+   "answer": 3,
+   "explanation": "The board certifies that products and operations comply with Shariah."
+  },
+  {
+   "q": "Salam is a contract for:",
+   "options": [
+    "Advance payment for future delivery of goods",
+    "Leasing assets",
+    "Partnership",
+    "Currency trade"
+   ],
+   "answer": 0,
+   "explanation": "In Salam, the buyer pays in advance for goods delivered later."
+  },
+  {
+   "q": "Istisna is primarily used for:",
+   "options": [
+    "Trading commodities",
+    "Manufacturing/construction financing",
+    "Insurance",
+    "Personal loans"
+   ],
+   "answer": 1,
+   "explanation": "Istisna finances assets that are manufactured or constructed."
+  },
+  {
+   "q": "Meezan Bank was established in:",
+   "options": [
+    "1997",
+    "2010",
+    "2002",
+    "2005"
+   ],
+   "answer": 2,
+   "explanation": "Meezan Bank commenced operations as Pakistan's first Islamic commercial bank in 2002."
+  },
+  {
+   "q": "A Personal Banking Officer's primary responsibility is:",
+   "options": [
+    "IT system management",
+    "Risk auditing",
+    "Cash counting only",
+    "Building and managing customer relationships"
+   ],
+   "answer": 3,
+   "explanation": "A PBO builds customer relationships and sells banking products."
+  },
+  {
+   "q": "KYC stands for:",
+   "options": [
+    "Know Your Customer",
+    "Keep Your Capital",
+    "Key Yield Calculation",
+    "Know Your Credit"
+   ],
+   "answer": 0,
+   "explanation": "KYC = Know Your Customer."
+  },
+  {
+   "q": "AML stands for:",
+   "options": [
+    "Asset Management Loan",
+    "Anti-Money Laundering",
+    "Annual Monetary Limit",
+    "Approved Money Lending"
+   ],
+   "answer": 1,
+   "explanation": "AML = Anti-Money Laundering."
+  },
+  {
+   "q": "CNIC verification is required in banking to:",
+   "options": [
+    "Check credit score",
+    "Calculate interest",
+    "Verify customer identity (KYC)",
+    "Issue debit cards"
+   ],
+   "answer": 2,
+   "explanation": "CNIC verification confirms the customer's identity for KYC."
+  },
+  {
+   "q": "A Current Account in Islamic banking is based on:",
+   "options": [
+    "Murabaha",
+    "Ijarah",
+    "Salam",
+    "Qard (interest-free loan to bank)"
+   ],
+   "answer": 3,
+   "explanation": "Current account deposits are treated as Qard — an interest-free loan to the bank."
+  },
+  {
+   "q": "Which document is required to open a bank account in Pakistan?",
+   "options": [
+    "Valid CNIC / NICOP",
+    "Passport only",
+    "Student card",
+    "Utility bill only"
+   ],
+   "answer": 0,
+   "explanation": "A valid CNIC or NICOP is required to open an account."
+  },
+  {
+   "q": "Cross-selling in banking means:",
+   "options": [
+    "Selling products to competitors",
+    "Offering additional products to existing customers",
+    "Closing inactive accounts",
+    "Hiring new staff"
+   ],
+   "answer": 1,
+   "explanation": "Cross-selling means offering more products to current customers."
+  },
+  {
+   "q": "KIBOR stands for:",
+   "options": [
+    "Key Islamic Banking Operation Rate",
+    "Karachi Internal Bond Offering Rate",
+    "Karachi Inter-Bank Offered Rate",
+    "Khyber Inter-Bank Offered Rate"
+   ],
+   "answer": 2,
+   "explanation": "KIBOR = Karachi Inter-Bank Offered Rate."
+  },
+  {
+   "q": "State Bank of Pakistan (SBP) is the:",
+   "options": [
+    "Largest commercial bank",
+    "Investment bank",
+    "Private bank",
+    "Central bank and regulator"
+   ],
+   "answer": 3,
+   "explanation": "SBP is Pakistan's central bank and banking regulator."
+  },
+  {
+   "q": "A Profit & Loss Sharing (PLS) savings account earns:",
+   "options": [
+    "Profit based on bank's earnings",
+    "Fixed interest",
+    "No return at all",
+    "Monthly salary"
+   ],
+   "answer": 0,
+   "explanation": "PLS accounts earn profit linked to the bank's earnings, not fixed interest."
+  },
+  {
+   "q": "Cheque clearing in Pakistan is managed through:",
+   "options": [
+    "SECP",
+    "NIFT (National Institutional Facilitation Technologies)",
+    "FBR",
+    "SBP directly"
+   ],
+   "answer": 1,
+   "explanation": "NIFT handles interbank cheque clearing in Pakistan."
+  },
+  {
+   "q": "CRM in banking stands for:",
+   "options": [
+    "Credit Risk Management",
+    "Central Revenue Model",
+    "Customer Relationship Management",
+    "Cash Reserve Maintenance"
+   ],
+   "answer": 2,
+   "explanation": "CRM = Customer Relationship Management."
+  },
+  {
+   "q": "RAAST is:",
+   "options": [
+    "A foreign currency account",
+    "A type of Islamic bond",
+    "A mobile wallet",
+    "Pakistan's instant digital payment system by SBP"
+   ],
+   "answer": 3,
+   "explanation": "Raast is SBP's instant digital payment system."
+  },
+  {
+   "q": "The minimum age to open an independent bank account in Pakistan is:",
+   "options": [
+    "18 years",
+    "16 years",
+    "21 years",
+    "15 years"
+   ],
+   "answer": 0,
+   "explanation": "An independent account requires the holder to be 18 with a valid CNIC."
+  },
+  {
+   "q": "Good customer service in a bank branch includes:",
+   "options": [
+    "Ignoring complaints",
+    "Prompt, polite & accurate assistance",
+    "Delaying transactions",
+    "Limited branch hours"
+   ],
+   "answer": 1,
+   "explanation": "Good service means prompt, polite and accurate assistance."
+  }
+ ]
+}

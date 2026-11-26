@@ -9,18 +9,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 <link rel="canonical" href="https://banktesthelp.github.io/quiz.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BankTest.pk">
 <meta property="og:title" content="Free Bank Test Practice Quiz — English, Math, IQ & Banking">
 <meta property="og:description" content="Take a free timed-style Pakistan bank test practice quiz with instant feedback, detailed explanations for every question, and a 60% pass score.">
 <meta property="og:url" content="https://banktesthelp.github.io/quiz.html">
-<meta property="og:image" content="https://banktesthelp.github.io/lion-hero.jpg">
+<meta property="og:image" content="https://banktesthelp.github.io/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Free Bank Test Practice Quiz — English, Math, IQ & Banking">
 <meta name="twitter:description" content="Take a free timed-style Pakistan bank test practice quiz with instant feedback, detailed explanations for every question, and a 60% pass score.">
-<meta name="twitter:image" content="https://banktesthelp.github.io/lion-hero.jpg">
+<meta name="twitter:image" content="https://banktesthelp.github.io/logo.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://banktesthelp.github.io/quiz.html#webpage","url":"https://banktesthelp.github.io/quiz.html","name":"Free Bank Test Practice Quiz — English, Math, IQ & Banking","description":"Take a free timed-style Pakistan bank test practice quiz with instant feedback, detailed explanations for every question, and a 60% pass score.","inLanguage":"en","isPartOf":{"@id":"https://banktesthelp.github.io/#website"},"dateModified":"2026-11-26"}]}
 </script>
@@ -54,12 +54,48 @@
         <h1 id="quizTopicName">Practice Quiz</h1>
         <p class="quiz-meta"><span id="quizBankName"></span></p>
         <p class="quiz-meta" id="quizCountInfo"></p>
+        <div class="picker-grid">
+          <div class="form-group">
+            <label for="bankPick">Bank</label>
+            <select id="bankPick">
+              <option value="nbp">National Bank of Pakistan (NBP)</option>
+              <option value="sbp">State Bank of Pakistan (SBP)</option>
+              <option value="hbl">Habib Bank Limited (HBL)</option>
+              <option value="mcb">MCB Bank (MCB)</option>
+              <option value="ubl">United Bank Limited (UBL)</option>
+              <option value="meezan">Meezan Bank</option>
+              <option value="allied">Allied Bank Limited (Allied)</option>
+              <option value="bop">The Bank of Punjab (BOP)</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="topicPick">Topic</label>
+            <select id="topicPick">
+              <option value="english">English</option>
+              <option value="math">Mathematics</option>
+              <option value="iq">IQ &amp; Analytical Reasoning</option>
+              <option value="gk">General Knowledge</option>
+              <option value="current-affairs">Current Affairs</option>
+              <option value="banking">Banking &amp; Finance</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="countPick">Questions</label>
+            <select id="countPick">
+              <option value="10">10 questions</option>
+              <option value="15" selected>15 questions</option>
+              <option value="25">25 questions</option>
+              <option value="50">50 questions</option>
+            </select>
+          </div>
+        </div>
         <button type="button" class="btn btn-green btn-block" id="quizStartBtn">Start Quiz</button>
         <p class="mt-2"><a href="topics.html">Choose a different topic</a></p>
       </div>
 
       <!-- Question screen -->
       <div id="quizQuestion" class="hidden">
+        <div class="quiz-topbar"><span id="qTimer">Time: 00:00</span><span id="qScore">Score: 0/0</span></div>
         <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
         <p class="q-counter"><span id="qCounter"></span> · <span id="qTopicTag"></span></p>
         <h2 class="q-text" id="qText"></h2>
@@ -73,8 +109,15 @@
       <!-- Results screen -->
       <div id="quizResults" class="hidden results">
         <h2>Your Results</h2>
-        <div class="score-big" id="scoreBig">0%</div>
+        <div class="score-ring">
+          <svg viewBox="0 0 120 120" width="150" height="150" aria-hidden="true">
+            <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+            <circle class="ring-fg" id="scoreRing" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="score-ring-text"><span id="scoreBig">0%</span></div>
+        </div>
         <p id="scoreDetail"></p>
+        <p id="scoreTime"></p>
         <p id="scoreVerdict"></p>
 
         <!-- AD PLACEHOLDER: paste your AdSense ad unit <ins> code inside this div. Setup instructions in config.js. -->

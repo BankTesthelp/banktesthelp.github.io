@@ -1,48 +1,48 @@
 /* ============================================================
    BankTest.pk — main stylesheet
-   "New Simple" design (2026-11-26 rebuild):
-   clean flat layout, big readable text, rich professional colours.
-   Primary deep teal #0B6B5E, coral accent #FF6B4A, warm gold #C9A227
-   (matches the gold bank logo), white cards, deep ink text.
+   "Midnight Pro" dark theme (2026-11-26):
+   deep navy-charcoal background, gold primary accent
+   (matches the gold bank logo), teal secondary accent,
+   near-white headings, light slate body text.
    Fonts: Bricolage Grotesque (display) + Manrope (body).
    ============================================================ */
 
 :root {
-  /* Rich palette */
-  --teal: #0B6B5E;
-  --teal-dark: #084C43;
-  --teal-darker: #073E36;
-  --teal-mid: #128A77;
-  --teal-light: #17A08C;
-  --teal-tint: #E3F2EE;
-  --teal-pale: #CDEFE8;
-  --coral: #FF6B4A;
-  --coral-dark: #E8553A;
-  --coral-tint: #FFECE6;
-  --gold: #C9A227;
-  --gold-dark: #9A7B1A;
-  --gold-light: #E3C565;
-  --gold-tint: #F8F0D2;
-  --bg: #F6F9F8;
-  --bg-soft: #EFF6F3;
-  --card: #FFFFFF;
-  --ink: #122E2A;
-  --muted: #47605A;
-  --border: #D5E4DE;
-  --border-strong: #B9D2CA;
+  /* Midnight Pro palette */
+  --teal: #2DD4BF;
+  --teal-dark: #14B8A6;
+  --teal-darker: #0B1220;
+  --teal-mid: #2DD4BF;
+  --teal-light: #5EEAD4;
+  --teal-tint: #134E4A;
+  --teal-pale: #115E59;
+  --coral: #D4AF37;
+  --coral-dark: #E7C95C;
+  --coral-tint: #3A2E0A;
+  --gold: #D4AF37;
+  --gold-dark: #B8941F;
+  --gold-light: #E7C95C;
+  --gold-tint: #3A2E0A;
+  --bg: #0F172A;
+  --bg-soft: #111827;
+  --card: #1E293B;
+  --ink: #F8FAFC;
+  --muted: #94A3B8;
+  --border: #334155;
+  --border-strong: #475569;
   /* Functional (answers/feedback) */
-  --ok: #1E7A4C;
-  --ok-bg: #E2F2E6;
-  --red: #C0392B;
-  --red-bg: #FBE9E4;
+  --ok: #4ADE80;
+  --ok-bg: #14532D;
+  --red: #FCA5A5;
+  --red-bg: #7F1D1D;
   /* Legacy aliases */
-  --green: #0B6B5E;
-  --green-dark: #084C43;
-  --green-light: #E3F2EE;
+  --green: #2DD4BF;
+  --green-dark: #14B8A6;
+  --green-light: #134E4A;
   --radius: 16px;
   --radius-sm: 10px;
-  --shadow: 0 4px 16px rgba(11, 107, 94, 0.10);
-  --shadow-lift: 0 10px 26px rgba(11, 107, 94, 0.16);
+  --shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+  --shadow-lift: 0 10px 26px rgba(0, 0, 0, 0.45);
   --font: "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
   --font-display: "Bricolage Grotesque", "Manrope", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
@@ -59,14 +59,14 @@ body {
   font-size: 16px;
 }
 
-::selection { background: rgba(11, 107, 94, 0.25); }
+::selection { background: rgba(45, 212, 191, 0.35); }
 
 img { max-width: 100%; height: auto; }
 
 a { color: var(--teal); text-decoration: none; }
 a:hover { text-decoration: underline; }
 
-:focus-visible { outline: 3px solid rgba(11, 107, 94, 0.55); outline-offset: 2px; }
+:focus-visible { outline: 3px solid rgba(45, 212, 191, 0.6); outline-offset: 2px; }
 
 .container { width: 100%; max-width: 1140px; margin: 0 auto; padding: 0 20px; }
 
@@ -91,7 +91,7 @@ li { margin-bottom: 0.35em; }
   position: sticky;
   top: 0;
   z-index: 100;
-  box-shadow: 0 2px 12px rgba(7, 62, 54, 0.35);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
 }
 .header-inner {
   display: flex;
@@ -144,7 +144,7 @@ li { margin-bottom: 0.35em; }
 
 /* ---------- Hero (homepage, simple) ---------- */
 .hero {
-  background: linear-gradient(160deg, var(--teal) 0%, var(--teal-dark) 100%);
+  background: linear-gradient(160deg, #1E293B 0%, #0B1220 100%);
   color: #fff;
   padding: 56px 0 60px;
 }
@@ -226,7 +226,7 @@ li { margin-bottom: 0.35em; }
 .btn-primary {
   background: var(--coral);
   color: #fff;
-  box-shadow: 0 8px 20px rgba(255, 107, 74, 0.40);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
 }
 .btn-primary:hover { background: var(--coral-dark); }
 /* Secondary: white pill, deep teal text */
@@ -235,12 +235,12 @@ li { margin-bottom: 0.35em; }
   color: var(--teal-dark);
   border: 2px solid #fff;
 }
-.btn-secondary:hover { background: var(--teal-tint); }
+.btn-secondary:hover { background: #E2E8F0; }
 /* Solid deep teal (quiz / mock CTAs) */
 .btn-green {
   background: var(--teal);
   color: #fff;
-  box-shadow: 0 8px 20px rgba(11, 107, 94, 0.30);
+  box-shadow: 0 8px 20px rgba(45, 212, 191, 0.25);
 }
 .btn-green:hover { background: var(--teal-dark); }
 .btn-outline {
@@ -258,7 +258,7 @@ li { margin-bottom: 0.35em; }
   padding: 15px 28px;
   border-radius: 12px;
   font-size: 1.05rem;
-  box-shadow: 0 8px 20px rgba(255, 107, 74, 0.40);
+  box-shadow: 0 8px 20px rgba(212, 175, 55, 0.35);
 }
 .btn-book:hover { text-decoration: none; background: var(--coral-dark); }
 
@@ -325,8 +325,8 @@ li { margin-bottom: 0.35em; }
   margin-bottom: 10px;
   align-self: flex-start;
   background: var(--gold-tint);
-  color: var(--gold-dark);
-  border: 1px solid rgba(201, 162, 39, 0.45);
+  color: var(--gold-light);
+  border: 1px solid rgba(212, 175, 55, 0.45);
 }
 .badge-row { margin-bottom: 10px; }
 .badge-row .badge { margin-bottom: 0; }
@@ -349,7 +349,7 @@ li { margin-bottom: 0.35em; }
   width: 40px; height: 40px;
   border-radius: 50%;
   background: var(--teal);
-  color: #fff;
+  color: #0F172A;
   font-family: var(--font-display);
   font-weight: 800;
   margin-bottom: 12px;
@@ -388,7 +388,7 @@ li { margin-bottom: 0.35em; }
 /* ---------- Ad slots ---------- */
 .ad-slot {
   border: 2px dashed var(--border-strong);
-  background: #fff;
+  background: var(--card);
   border-radius: var(--radius);
   min-height: 90px;
   display: flex;
@@ -412,7 +412,7 @@ li { margin-bottom: 0.35em; }
 }
 .pattern-table th {
   background: var(--teal);
-  color: #fff;
+  color: #0F172A;
   font-family: var(--font-display);
   font-weight: 700;
 }
@@ -498,7 +498,7 @@ li { margin-bottom: 0.35em; }
 .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
   outline: none;
   border-color: var(--teal);
-  box-shadow: 0 0 0 3px rgba(11, 107, 94, 0.20);
+  box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.25);
 }
 .form-group textarea { min-height: 140px; resize: vertical; }
 .contact-form { max-width: 620px; }
@@ -538,14 +538,14 @@ li { margin-bottom: 0.35em; }
 }
 .quiz-topbar #qScore {
   background: var(--gold-tint);
-  color: var(--gold-dark);
-  border: 1px solid rgba(201, 162, 39, 0.45);
+  color: var(--gold-light);
+  border: 1px solid rgba(212, 175, 55, 0.45);
   padding: 6px 14px;
   border-radius: 999px;
 }
 .progress-bar {
   height: 12px;
-  background: #DCE7E2;
+  background: #334155;
   border-radius: 999px;
   overflow: hidden;
   margin-bottom: 10px;
@@ -598,7 +598,7 @@ li { margin-bottom: 0.35em; }
 }
 .score-ring { position: relative; width: 150px; height: 150px; margin: 10px auto; }
 .score-ring svg { display: block; transform: rotate(-90deg); }
-.ring-bg { fill: none; stroke: #E5EDEA; stroke-width: 11; }
+.ring-bg { fill: none; stroke: #334155; stroke-width: 11; }
 .ring-fg { fill: none; stroke: var(--ok); stroke-width: 11; stroke-linecap: round; transition: stroke-dashoffset 0.6s ease; }
 .score-ring-text {
   position: absolute;
@@ -648,7 +648,7 @@ li { margin-bottom: 0.35em; }
   letter-spacing: 1px;
   box-shadow: var(--shadow);
 }
-.timer.timer-warning { background: var(--red); animation: pulse 1s infinite; }
+.timer.timer-warning { background: #DC2626; animation: pulse 1s infinite; }
 @keyframes pulse { 50% { opacity: 0.75; } }
 .mock-layout { display: grid; grid-template-columns: 1fr; gap: 18px; }
 .mock-main {
@@ -680,7 +680,7 @@ li { margin-bottom: 0.35em; }
 .nav-dot:hover { border-color: var(--teal); }
 .nav-dot.answered {
   background: var(--teal);
-  color: #fff;
+  color: #0F172A;
   border-color: transparent;
 }
 .nav-dot.current { outline: 2px solid var(--coral); outline-offset: 1px; }
@@ -693,7 +693,7 @@ li { margin-bottom: 0.35em; }
 /* ---------- Footer ---------- */
 .site-footer {
   background: var(--teal-darker);
-  color: #B9D2CA;
+  color: #94A3B8;
   margin-top: 0;
 }
 .footer-grid {
@@ -705,13 +705,13 @@ li { margin-bottom: 0.35em; }
 .footer-col h3 { color: #fff; font-size: 1rem; margin-bottom: 0.8em; }
 .footer-col ul { list-style: none; margin: 0; }
 .footer-col li { margin-bottom: 6px; }
-.footer-col a { color: #B9D2CA; font-size: 0.92rem; }
+.footer-col a { color: #94A3B8; font-size: 0.92rem; }
 .footer-col a:hover { color: #fff; }
 .footer-col p { font-size: 0.9rem; }
 .footer-col .brand { margin-bottom: 12px; }
 .footer-bottom { border-top: 1px solid rgba(255, 255, 255, 0.14); padding: 16px 0; font-size: 0.85rem; }
 .footer-bottom p { margin-bottom: 4px; }
-.footer-note { color: #8FA9A3; }
+.footer-note { color: #64748B; }
 .footer-owner { color: var(--gold-light); font-weight: 700; }
 .owner-line { font-weight: 700; color: var(--teal); }
 
@@ -729,7 +729,7 @@ li { margin-bottom: 0.35em; }
 /* ---------- Page scaffolding (inner pages) ---------- */
 .page { padding: 36px 0; }
 .page-hero {
-  background: var(--teal);
+  background: linear-gradient(160deg, #1E293B 0%, #0B1220 100%);
   color: #fff;
   padding: 42px 0;
   margin-bottom: 8px;
@@ -790,7 +790,7 @@ li { margin-bottom: 0.35em; }
 }
 
 /* ---------- Homepage 3-step flow: Bank -> Post -> Test ---------- */
-.flow-section { background: #fff; }
+.flow-section { background: var(--bg); }
 .flow-step {
   background: var(--card);
   border: 1px solid var(--border);
@@ -814,7 +814,7 @@ li { margin-bottom: 0.35em; }
   width: 38px; height: 38px;
   border-radius: 50%;
   background: var(--gold);
-  color: #fff;
+  color: #0F172A;
   font-family: var(--font-display);
   font-weight: 800;
   font-size: 1.1rem;
@@ -856,9 +856,9 @@ li { margin-bottom: 0.35em; }
 .flow-btn.selected {
   border-color: var(--teal);
   background: var(--teal);
-  color: #fff;
+  color: #0F172A;
 }
-.flow-btn.selected span { color: rgba(255, 255, 255, 0.85); }
+.flow-btn.selected span { color: rgba(15, 23, 42, 0.75); }
 .flow-chosen {
   font-size: 1.15rem;
   font-weight: 800;

@@ -40,21 +40,21 @@
     // ---------- Homepage 3-step flow: Bank -> Post -> Test ----------
     // Posts are the real posts named on each bank's own guide page.
     var FLOW_BANKS = {
+      ubl: "United Bank Limited (UBL)",
+      hbl: "Habib Bank Limited (HBL)",
       nbp: "National Bank of Pakistan (NBP)",
       sbp: "State Bank of Pakistan (SBP)",
-      hbl: "Habib Bank Limited (HBL)",
       mcb: "MCB Bank (MCB)",
-      ubl: "United Bank Limited (UBL)",
       meezan: "Meezan Bank",
       allied: "Allied Bank Limited (Allied)",
       bop: "The Bank of Punjab (BOP)"
     };
     var FLOW_POSTS = {
+      ubl: ["OG-IV", "BSO", "RE"],
+      hbl: ["Management Trainee", "Officer", "Support Staff"],
       nbp: ["Management Trainee Officer (MTO)", "Officer Grade-II (OG-II)", "Cashier / Teller", "Customer Service Representative"],
       sbp: ["YPIP — Young Professionals Induction Program", "SBOTS — SBP Officers Training Scheme", "Officer / Specialist"],
-      hbl: ["Management Trainee", "Officer", "Support Staff"],
       mcb: ["Management Trainee", "Officer", "Branch Staff"],
-      ubl: ["OG-IV", "BSO", "RE"],
       meezan: ["Personal Banking Officer (PBO)", "Management Trainee", "Officer"],
       allied: ["Management Trainee", "Officer", "Frontline Staff"],
       bop: ["Personal Banking Officer (PBO)", "Customer Services Officer (CSO)", "Branch Banking Sales"]

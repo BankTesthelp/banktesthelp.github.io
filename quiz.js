@@ -47,8 +47,22 @@
     order: [],
     index: 0,
     score: 0,
-    answers: []   // {chosen: n|null, correct: bool}
+    answers: [],   // {chosen: n|null, correct: bool}
+    startTime: 0,
+    timerId: null
   };
+
+  function fmtTime(ms) {
+    var s = Math.floor(ms / 1000);
+    var m = Math.floor(s / 60);
+    s = s % 60;
+    return (m < 10 ? "0" + m : m) + ":" + (s < 10 ? "0" + s : s);
+  }
+
+  function updateLiveScore() {
+    var done = state.answers.length;
+    setText(el("qScore"), "Score: " + state.score + "/" + done);
+  }
 
   function el(id) { return document.getElementById(id); }
 
@@ -68,17 +82,49 @@
     setText(el("quizBankName"), BANK_NAMES[bank]);
     setText(el("quizTopicName"), TOPIC_NAMES[topic]);
     setText(el("quizCountInfo"), state.questions.length + " questions · instant feedback with explanations · pass at " + PASS + "%");
+    // Pickers default to the current URL params
+    var bp = el("bankPick"), tp = el("topicPick"), cp = el("countPick");
+    if (bp) bp.value = bank;
+    if (tp) {
+      if (!TOPIC_NAMES[topic] || !tp.querySelector('option[value="' + topic + '"]')) {
+        var o = document.createElement("option");
+        o.value = topic;
+        o.textContent = TOPIC_NAMES[topic] || topic;
+        tp.appendChild(o);
+      }
+      tp.value = topic;
+    }
+    if (cp) cp.value = String(Math.min(count, 50));
     start.classList.remove("hidden");
     el("quizQuestion").classList.add("hidden");
     el("quizResults").classList.add("hidden");
-    el("quizStartBtn").addEventListener("click", startQuiz, { once: true });
+    el("quizStartBtn").addEventListener("click", startFromPicker, { once: true });
   }
 
   /* ---------- Question flow ---------- */
+  function startFromPicker() {
+    var bp = el("bankPick"), tp = el("topicPick"), cp = el("countPick");
+    var nb = bp ? bp.value : bank;
+    var nt = tp ? tp.value : topic;
+    var nc = cp ? parseInt(cp.value, 10) : count;
+    if (nb !== bank || nt !== topic || nc !== count) {
+      window.location.href = "quiz.html?bank=" + nb + "&topic=" + nt + "&count=" + nc;
+      return;
+    }
+    startQuiz();
+  }
+
   function startQuiz() {
     state.index = 0;
     state.score = 0;
     state.answers = [];
+    state.startTime = Date.now();
+    if (state.timerId) clearInterval(state.timerId);
+    state.timerId = setInterval(function () {
+      setText(el("qTimer"), "Time: " + fmtTime(Date.now() - state.startTime));
+    }, 1000);
+    setText(el("qTimer"), "Time: 00:00");
+    updateLiveScore();
     el("quizStart").classList.add("hidden");
     el("quizResults").classList.add("hidden");
     el("quizQuestion").classList.remove("hidden");
@@ -136,6 +182,7 @@
     exp.classList.remove("hidden");
 
     el("progressFill").style.width = Math.round(((state.index + 1) / state.questions.length) * 100) + "%";
+    updateLiveScore();
     el("nextBtn").classList.remove("hidden");
   }
 
@@ -155,10 +202,21 @@
     var pct = Math.round((state.score / total) * 100);
     var passed = pct >= PASS;
 
+    if (state.timerId) clearInterval(state.timerId);
+    var taken = state.startTime ? fmtTime(Date.now() - state.startTime) : "00:00";
+
     el("quizQuestion").classList.add("hidden");
     el("quizResults").classList.remove("hidden");
 
     setText(el("scoreBig"), pct + "%");
+    setText(el("scoreTime"), "Time taken: " + taken);
+    var ring = el("scoreRing");
+    if (ring) {
+      var C = 2 * Math.PI * 52;
+      ring.style.strokeDasharray = C.toFixed(1);
+      ring.style.strokeDashoffset = (C * (1 - pct / 100)).toFixed(1);
+      ring.style.stroke = passed ? "#2E7D4F" : "#FF6B4A";
+    }
     setText(el("scoreDetail"), "You answered " + state.score + " out of " + total + " questions correctly.");
 
     var verdict = el("scoreVerdict");

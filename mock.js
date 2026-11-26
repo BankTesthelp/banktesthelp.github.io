@@ -39,7 +39,8 @@
     chosen: [],      // chosen option index per question, null = unanswered
     secondsLeft: DEFAULT_MOCK.minutes * 60,
     timerId: null,
-    submitted: false
+    submitted: false,
+    startTime: 0
   };
 
   function el(id) { return document.getElementById(id); }
@@ -62,10 +63,20 @@
     var box = el("bankPick");
     box.innerHTML = "";
     Object.keys(BANK_NAMES).forEach(function (key) {
+      var cfg = mockConfig(key);
+      var total = TOPICS.reduce(function (n, t) { return n + cfg.perTopic[t]; }, 0);
       var b = document.createElement("button");
       b.type = "button";
-      b.className = "btn btn-green";
-      b.textContent = BANK_NAMES[key];
+      b.className = "btn btn-green bank-pick-btn";
+      b.innerHTML = "";
+      var nm = document.createElement("span");
+      nm.className = "bank-pick-name";
+      nm.textContent = BANK_NAMES[key];
+      var pt = document.createElement("span");
+      pt.className = "bank-pick-pattern";
+      pt.textContent = total + " questions · " + cfg.minutes + " minutes";
+      b.appendChild(nm);
+      b.appendChild(pt);
       b.addEventListener("click", function () { loadMock(key); });
       box.appendChild(b);
     });
@@ -108,10 +119,25 @@
       });
   }
 
+  /* ---------- Pre-selected test (from homepage Bank -> Post -> Test flow) ---------- */
+  function showSelected(bank, post) {
+    var cfg = mockConfig(bank);
+    var total = TOPICS.reduce(function (n, t) { return n + cfg.perTopic[t]; }, 0);
+    el("mockIntro").classList.add("hidden");
+    el("bankPick").classList.add("hidden");
+    el("mockInfo").textContent = "";
+    el("mockSelectedText").textContent = post + " — " + BANK_NAMES[bank];
+    el("mockSelectedPattern").textContent =
+      total + " questions · " + cfg.minutes + " minutes · pass at " + PASS + "%";
+    el("mockSelected").classList.remove("hidden");
+    el("mockSelectedStart").addEventListener("click", function () { loadMock(bank); }, { once: true });
+  }
+
   /* ---------- Test UI ---------- */
   function beginTest() {
     el("mockStart").classList.add("hidden");
     el("mockTest").classList.remove("hidden");
+    state.startTime = Date.now();
     state.secondsLeft = state.config.minutes * 60;
     updateTimer();
     state.timerId = setInterval(tick, 1000);
@@ -158,6 +184,8 @@
     });
     var done = state.chosen.filter(function (c) { return c !== null; }).length;
     el("mockProgress").textContent = done + " of " + state.questions.length + " answered";
+    var fill = el("mockProgressFill");
+    if (fill) fill.style.width = Math.round((done / state.questions.length) * 100) + "%";
   }
 
   function renderQ(i) {
@@ -221,6 +249,17 @@
     var passed = pct >= PASS;
 
     el("mockScoreBig").textContent = pct + "%";
+    var taken = "00:00";
+    if (state.startTime) taken = fmt(Math.floor((Date.now() - state.startTime) / 1000));
+    var st = el("mockScoreTime");
+    if (st) st.textContent = "Time taken: " + taken;
+    var ring = el("mockScoreRing");
+    if (ring) {
+      var C = 2 * Math.PI * 52;
+      ring.style.strokeDasharray = C.toFixed(1);
+      ring.style.strokeDashoffset = (C * (1 - pct / 100)).toFixed(1);
+      ring.style.stroke = passed ? "#2E7D4F" : "#FF6B4A";
+    }
     el("mockScoreDetail").textContent =
       "You answered " + score + " out of " + total + " correctly" +
       (auto ? " (time expired)." : ".");
@@ -291,8 +330,14 @@
       if (state.index < state.questions.length - 1) renderQ(state.index + 1);
     });
     // Deep link: mock.html?bank=bop starts the BOP mock straight away.
+    // With a post (mock.html?bank=nbp&post=MTO) show the selected test
+    // on the start screen instead, so the post name is visible first.
     var params = new URLSearchParams(window.location.search);
     var bank = (params.get("bank") || "").toLowerCase();
-    if (bank && BANK_NAMES[bank]) loadMock(bank);
+    var post = (params.get("post") || "").trim();
+    if (bank && BANK_NAMES[bank]) {
+      if (post) showSelected(bank, post);
+      else loadMock(bank);
+    }
   });
 })();

@@ -9,18 +9,18 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=4">
+<link rel="stylesheet" href="style.css?v=5">
 <link rel="canonical" href="https://banktesthelp.github.io/mock.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BankTest.pk">
 <meta property="og:title" content="Full Test — 50 Questions, 60 Minutes | BankTest.pk">
 <meta property="og:description" content="Take a free full-length bank test mock exam: 50 mixed questions across 6 sections with a 60-minute timer and section-wise score breakdown.">
 <meta property="og:url" content="https://banktesthelp.github.io/mock.html">
-<meta property="og:image" content="https://banktesthelp.github.io/lion-hero.jpg">
+<meta property="og:image" content="https://banktesthelp.github.io/logo.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Full Test — 50 Questions, 60 Minutes | BankTest.pk">
 <meta name="twitter:description" content="Take a free full-length bank test mock exam: 50 mixed questions across 6 sections with a 60-minute timer and section-wise score breakdown.">
-<meta name="twitter:image" content="https://banktesthelp.github.io/lion-hero.jpg">
+<meta name="twitter:image" content="https://banktesthelp.github.io/logo.png">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@graph":[{"@type":"WebPage","@id":"https://banktesthelp.github.io/mock.html#webpage","url":"https://banktesthelp.github.io/mock.html","name":"Full Test — 50 Questions, 60 Minutes | BankTest.pk","description":"Take a free full-length bank test mock exam: 50 mixed questions across 6 sections with a 60-minute timer and section-wise score breakdown.","inLanguage":"en","isPartOf":{"@id":"https://banktesthelp.github.io/#website"},"dateModified":"2026-11-26"}]}
 </script>
@@ -53,14 +53,21 @@
       <div id="mockStart" class="quiz-start">
         <h1>Full Full Test</h1>
         <p class="quiz-meta" id="mockInfo"></p>
-        <p>Choose a bank to begin. Questions are drawn from all six sections: English, Mathematics, IQ &amp; Analytical Reasoning, General Knowledge, Current Affairs, and Banking &amp; Finance.</p>
+        <p id="mockIntro">Choose a bank to begin. Questions are drawn from all six sections: English, Mathematics, IQ &amp; Analytical Reasoning, General Knowledge, Current Affairs, and Banking &amp; Finance.</p>
         <div class="bank-pick" id="bankPick"></div>
+        <div id="mockSelected" class="hidden">
+          <p class="flow-chosen" id="mockSelectedText"></p>
+          <p class="quiz-meta" id="mockSelectedPattern"></p>
+          <button type="button" class="btn btn-green btn-block" id="mockSelectedStart">Start Test</button>
+          <p class="mt-2"><a href="mock.html">Choose a different bank</a></p>
+        </div>
         <div class="note-box info"><strong>How it works:</strong> each bank's mock follows its real test format — the Bank of Punjab online-assessment mock is 60 questions in 75 minutes. You can move between questions with the navigator, change answers any time, and submit early. Your score is broken down by section at the end.</div>
       </div>
 
       <!-- Test screen -->
       <div id="mockTest" class="hidden">
         <div class="timer" id="mockTimer">Time left: 60:00</div>
+        <div class="progress-bar"><div class="progress-fill" id="mockProgressFill"></div></div>
         <div class="mock-layout">
           <div class="mock-main">
             <p class="q-counter"><span id="mockQCounter"></span> · <span id="mockQTopic"></span></p>
@@ -83,8 +90,15 @@
       <!-- Results screen -->
       <div id="mockResults" class="hidden results">
         <h2>Full Test Results</h2>
-        <div class="score-big" id="mockScoreBig">0%</div>
+        <div class="score-ring">
+          <svg viewBox="0 0 120 120" width="150" height="150" aria-hidden="true">
+            <circle class="ring-bg" cx="60" cy="60" r="52"></circle>
+            <circle class="ring-fg" id="mockScoreRing" cx="60" cy="60" r="52"></circle>
+          </svg>
+          <div class="score-ring-text"><span id="mockScoreBig">0%</span></div>
+        </div>
         <p id="mockScoreDetail"></p>
+        <p id="mockScoreTime"></p>
         <p id="mockVerdict"></p>
 
         <!-- AD PLACEHOLDER: paste your AdSense ad unit <ins> code inside this div. Setup instructions in config.js. -->

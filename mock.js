@@ -7,7 +7,7 @@
 (function () {
   "use strict";
 
-  var BANK_NAMES = { nbp: "National Bank of Pakistan (NBP)", sbp: "State Bank of Pakistan (SBP)", hbl: "Habib Bank Limited (HBL)", mcb: "MCB Bank (MCB)", ubl: "United Bank Limited (UBL)", meezan: "Meezan Bank", allied: "Allied Bank Limited (Allied)", bop: "The Bank of Punjab (BOP)" };
+  var BANK_NAMES = { ubl: "United Bank Limited (UBL)", hbl: "Habib Bank Limited (HBL)", nbp: "National Bank of Pakistan (NBP)", sbp: "State Bank of Pakistan (SBP)", mcb: "MCB Bank (MCB)", meezan: "Meezan Bank", allied: "Allied Bank Limited (Allied)", bop: "The Bank of Punjab (BOP)" };
   var TOPICS = ["english", "math", "iq", "gk", "current-affairs", "banking"];
   var TOPIC_NAMES = {
     "english": "English",
@@ -37,6 +37,7 @@
     questions: [],   // {q, options, answer, explanation, topic}
     index: 0,
     chosen: [],      // chosen option index per question, null = unanswered
+    marked: [],      // marked-for-review flag per question, false by default
     secondsLeft: DEFAULT_MOCK.minutes * 60,
     timerId: null,
     submitted: false,
@@ -108,6 +109,7 @@
         parts.forEach(function (p) { all = all.concat(p); });
         state.questions = shuffle(all);
         state.chosen = state.questions.map(function () { return null; });
+        state.marked = state.questions.map(function () { return false; });
         beginTest();
       })
       .catch(function () {
@@ -142,6 +144,7 @@
     updateTimer();
     state.timerId = setInterval(tick, 1000);
     buildNav();
+    buildSectionTabs();
     renderQ(0);
   }
 
@@ -180,12 +183,80 @@
       var d = el("navdot-" + i);
       if (!d) return;
       d.classList.toggle("answered", state.chosen[i] !== null);
+      d.classList.toggle("marked", !!state.marked[i]);
       d.classList.toggle("current", i === state.index);
     });
     var done = state.chosen.filter(function (c) { return c !== null; }).length;
     el("mockProgress").textContent = done + " of " + state.questions.length + " answered";
     var fill = el("mockProgressFill");
     if (fill) fill.style.width = Math.round((done / state.questions.length) * 100) + "%";
+    updateSectionTabs();
+  }
+
+  /* ---------- Section tabs ---------- */
+  function sectionFirstIndex(topic) {
+    for (var i = 0; i < state.questions.length; i++) {
+      if (state.questions[i].topic === topic) return i;
+    }
+    return -1;
+  }
+
+  function buildSectionTabs() {
+    var row = el("mockSectionTabs");
+    if (!row) return;
+    row.innerHTML = "";
+    TOPICS.forEach(function (t) {
+      var tab = document.createElement("button");
+      tab.type = "button";
+      tab.className = "x-tab";
+      tab.id = "xtab-" + t;
+      var nm = document.createElement("span");
+      nm.className = "x-tab-name";
+      nm.textContent = TOPIC_NAMES[t];
+      var ct = document.createElement("span");
+      ct.className = "x-tab-count";
+      ct.id = "xtab-count-" + t;
+      tab.appendChild(nm);
+      tab.appendChild(ct);
+      tab.addEventListener("click", function () {
+        var first = sectionFirstIndex(t);
+        if (first >= 0) renderQ(first);
+      });
+      row.appendChild(tab);
+    });
+    updateSectionTabs();
+  }
+
+  function updateSectionTabs() {
+    if (!state.questions.length) return;
+    var currentTopic = state.questions[state.index] ? state.questions[state.index].topic : null;
+    TOPICS.forEach(function (t) {
+      var tab = el("xtab-" + t);
+      var ct = el("xtab-count-" + t);
+      if (!tab) return;
+      var total = 0, done = 0;
+      state.questions.forEach(function (q, i) {
+        if (q.topic !== t) return;
+        total++;
+        if (state.chosen[i] !== null) done++;
+      });
+      if (ct) ct.textContent = done + "/" + total;
+      tab.classList.toggle("active", t === currentTopic);
+    });
+  }
+
+  /* ---------- Mark for review ---------- */
+  function updateMarkBtn() {
+    var b = el("mockMark");
+    if (!b) return;
+    b.textContent = state.marked[state.index] ? "Marked — unmark" : "Mark for review";
+  }
+
+  function toggleMark() {
+    if (!state.questions.length) return;
+    state.marked[state.index] = !state.marked[state.index];
+    updateMarkBtn();
+    updateNavDots();
   }
 
   function renderQ(i) {
@@ -201,7 +272,14 @@
       var btn = document.createElement("button");
       btn.type = "button";
       btn.className = "option-btn" + (state.chosen[i] === oi ? " correct" : "");
-      btn.textContent = opt;
+      var letter = document.createElement("span");
+      letter.className = "x-opt-letter";
+      letter.textContent = String.fromCharCode(65 + oi);
+      btn.appendChild(letter);
+      var txt = document.createElement("span");
+      txt.className = "x-opt-text";
+      txt.textContent = opt;
+      btn.appendChild(txt);
       btn.addEventListener("click", function () {
         state.chosen[i] = oi;
         renderQ(i);
@@ -209,6 +287,7 @@
       });
       box.appendChild(btn);
     });
+    updateMarkBtn();
     updateNavDots();
   }
 
@@ -258,7 +337,7 @@
       var C = 2 * Math.PI * 52;
       ring.style.strokeDasharray = C.toFixed(1);
       ring.style.strokeDashoffset = (C * (1 - pct / 100)).toFixed(1);
-      ring.style.stroke = passed ? "#2E7D4F" : "#FF6B4A";
+      ring.style.stroke = passed ? "#4ADE80" : "#F87171";
     }
     el("mockScoreDetail").textContent =
       "You answered " + score + " out of " + total + " correctly" +
@@ -267,22 +346,54 @@
     v.className = passed ? "result-pass" : "result-fail";
     v.textContent = passed ? "Passed — great job!" : "Not passed — keep practicing!";
 
-    // Section-wise table
-    var tbl = el("sectionTable");
-    tbl.innerHTML = "";
-    var head = document.createElement("tr");
-    ["Section", "Correct", "Score"].forEach(function (h) {
-      var th = document.createElement("th"); th.textContent = h; head.appendChild(th);
-    });
-    tbl.appendChild(head);
+    // Stat tiles
+    var tiles = el("mockStatTiles");
+    if (tiles) {
+      tiles.innerHTML = "";
+      var wrong = total - score;
+      [
+        { num: score + " / " + total, label: "Correct" },
+        { num: String(wrong), label: "Wrong" },
+        { num: taken, label: "Time taken" },
+        { num: PASS + "%", label: "Pass mark" }
+      ].forEach(function (s) {
+        var tile = document.createElement("div");
+        tile.className = "x-stat-tile";
+        var num = document.createElement("div");
+        num.className = "x-stat-num";
+        num.textContent = s.num;
+        var lab = document.createElement("div");
+        lab.className = "x-stat-label";
+        lab.textContent = s.label;
+        tile.appendChild(num);
+        tile.appendChild(lab);
+        tiles.appendChild(tile);
+      });
+    }
+
+    // Section-wise breakdown bars
+    var breakdown = el("sectionTable");
+    breakdown.innerHTML = "";
     TOPICS.forEach(function (t) {
-      var tr = document.createElement("tr");
-      var td1 = document.createElement("td"); td1.textContent = TOPIC_NAMES[t];
-      var td2 = document.createElement("td"); td2.textContent = byTopic[t].correct + " / " + byTopic[t].total;
-      var td3 = document.createElement("td");
-      td3.textContent = byTopic[t].total ? Math.round((byTopic[t].correct / byTopic[t].total) * 100) + "%" : "—";
-      tr.appendChild(td1); tr.appendChild(td2); tr.appendChild(td3);
-      tbl.appendChild(tr);
+      var pctT = byTopic[t].total ? Math.round((byTopic[t].correct / byTopic[t].total) * 100) : 0;
+      var row = document.createElement("div");
+      row.className = "x-break-row";
+      var nm = document.createElement("div");
+      nm.className = "x-break-name";
+      nm.textContent = TOPIC_NAMES[t];
+      var bar = document.createElement("div");
+      bar.className = "x-break-bar";
+      var fill = document.createElement("div");
+      fill.className = "x-break-fill";
+      fill.style.width = pctT + "%";
+      bar.appendChild(fill);
+      var val = document.createElement("div");
+      val.className = "x-break-val";
+      val.textContent = byTopic[t].correct + " / " + byTopic[t].total + " · " + pctT + "%";
+      row.appendChild(nm);
+      row.appendChild(bar);
+      row.appendChild(val);
+      breakdown.appendChild(row);
     });
 
     // Review grouped by topic
@@ -323,6 +434,7 @@
   document.addEventListener("DOMContentLoaded", function () {
     initPicker();
     el("mockSubmit").addEventListener("click", function () { submit(false); });
+    el("mockMark").addEventListener("click", toggleMark);
     el("mockPrev").addEventListener("click", function () {
       if (state.index > 0) renderQ(state.index - 1);
     });

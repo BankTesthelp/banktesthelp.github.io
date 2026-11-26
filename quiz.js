@@ -8,11 +8,11 @@
   "use strict";
 
   var BANK_NAMES = {
+    ubl: "United Bank Limited (UBL)",
+    hbl: "Habib Bank Limited (HBL)",
     nbp: "National Bank of Pakistan (NBP)",
     sbp: "State Bank of Pakistan (SBP)",
-    hbl: "Habib Bank Limited (HBL)",
     mcb: "MCB Bank (MCB)",
-    ubl: "United Bank Limited (UBL)",
     meezan: "Meezan Bank",
     allied: "Allied Bank Limited (Allied)",
     bop: "The Bank of Punjab (BOP)"
@@ -128,8 +128,33 @@
     el("quizStart").classList.add("hidden");
     el("quizResults").classList.add("hidden");
     el("quizQuestion").classList.remove("hidden");
+    buildPalette();
     renderQuestion();
     window.scrollTo(0, 0);
+  }
+
+  /* ---------- Question palette (indicator dots, not clickable) ---------- */
+  function buildPalette() {
+    var pal = el("paletteBox");
+    if (!pal) return;
+    pal.innerHTML = "";
+    state.questions.forEach(function (q, i) {
+      var d = document.createElement("span");
+      d.className = "x-pal-dot";
+      d.textContent = String(i + 1);
+      pal.appendChild(d);
+    });
+    updatePalette();
+  }
+
+  function updatePalette() {
+    var pal = el("paletteBox");
+    if (!pal) return;
+    var dots = pal.querySelectorAll(".x-pal-dot");
+    dots.forEach(function (d, i) {
+      d.classList.toggle("current", i === state.index);
+      d.classList.toggle("answered", i < state.answers.length);
+    });
   }
 
   function renderQuestion() {
@@ -147,7 +172,11 @@
       var btn = document.createElement("button");
       btn.type = "button";
       btn.className = "option-btn";
-      btn.textContent = opt;
+      var badge = document.createElement("span");
+      badge.className = "x-opt-letter";
+      badge.textContent = String.fromCharCode(65 + i); // A, B, C, D
+      btn.appendChild(badge);
+      btn.appendChild(document.createTextNode(opt));
       btn.addEventListener("click", function () { selectOption(i, btn); });
       box.appendChild(btn);
     });
@@ -157,6 +186,7 @@
     next.classList.add("hidden");
     setText(next, state.index === total - 1 ? "See Results" : "Next Question");
     next.onclick = nextStep;
+    updatePalette();
   }
 
   function selectOption(i, btn) {
@@ -183,6 +213,7 @@
 
     el("progressFill").style.width = Math.round(((state.index + 1) / state.questions.length) * 100) + "%";
     updateLiveScore();
+    updatePalette();
     el("nextBtn").classList.remove("hidden");
   }
 
@@ -215,9 +246,15 @@
       var C = 2 * Math.PI * 52;
       ring.style.strokeDasharray = C.toFixed(1);
       ring.style.strokeDashoffset = (C * (1 - pct / 100)).toFixed(1);
-      ring.style.stroke = passed ? "#2E7D4F" : "#FF6B4A";
+      ring.style.stroke = passed ? "#4ADE80" : "#F87171";
     }
     setText(el("scoreDetail"), "You answered " + state.score + " out of " + total + " questions correctly.");
+
+    // Stat tiles
+    setText(el("statCorrect"), state.score + "/" + total);
+    setText(el("statWrong"), String(total - state.score));
+    setText(el("statTime"), taken);
+    setText(el("statPass"), PASS + "%");
 
     var verdict = el("scoreVerdict");
     verdict.className = passed ? "result-pass" : "result-fail";

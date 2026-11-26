@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 <link rel="canonical" href="https://banktesthelp.github.io/mock.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BankTest.pk">
@@ -47,10 +47,12 @@
 </header>
 <main>
   <div class="container section">
-    <div class="quiz-wrap" style="max-width:960px">
+    <div class="quiz-wrap">
 
       <!-- Start screen -->
-      <div id="mockStart" class="quiz-start">
+      <div id="mockStart" class="quiz-start x-start">
+        <div class="x-start">
+        <p class="x-kicker">Free Full-Length Mock Exam</p>
         <h1>Full Full Test</h1>
         <p class="quiz-meta" id="mockInfo"></p>
         <p id="mockIntro">Choose a bank to begin. Questions are drawn from all six sections: English, Mathematics, IQ &amp; Analytical Reasoning, General Knowledge, Current Affairs, and Banking &amp; Finance.</p>
@@ -62,24 +64,30 @@
           <p class="mt-2"><a href="mock.html">Choose a different bank</a></p>
         </div>
         <div class="note-box info"><strong>How it works:</strong> each bank's mock follows its real test format — the Bank of Punjab online-assessment mock is 60 questions in 75 minutes. You can move between questions with the navigator, change answers any time, and submit early. Your score is broken down by section at the end.</div>
+        </div>
       </div>
 
       <!-- Test screen -->
       <div id="mockTest" class="hidden">
-        <div class="timer" id="mockTimer">Time left: 60:00</div>
-        <div class="progress-bar"><div class="progress-fill" id="mockProgressFill"></div></div>
+        <div class="x-exam-bar">
+          <div class="timer x-timer" id="mockTimer">Time left: 60:00</div>
+          <div class="progress-bar"><div class="progress-fill" id="mockProgressFill"></div></div>
+          <button type="button" class="x-mark-btn" id="mockMark">Mark for review</button>
+        </div>
+        <div class="x-section-tabs" id="mockSectionTabs"></div>
         <div class="mock-layout">
-          <div class="mock-main">
+          <div class="mock-main x-qcard">
             <p class="q-counter"><span id="mockQCounter"></span> · <span id="mockQTopic"></span></p>
             <h2 class="q-text" id="mockQText"></h2>
             <div class="options" id="mockOptions"></div>
-            <div class="quiz-nav" style="justify-content:space-between">
-              <button type="button" class="btn btn-outline" style="border-color:var(--green);color:var(--green)" id="mockPrev">Previous</button>
+            <div class="quiz-nav">
+              <button type="button" class="btn btn-outline" id="mockPrev">Previous</button>
               <button type="button" class="btn btn-green" id="mockNext">Next</button>
             </div>
           </div>
           <aside class="mock-side">
             <h3>Navigator</h3>
+            <p class="x-legend"><span class="x-leg x-leg-answered">Answered</span> <span class="x-leg x-leg-marked">Marked</span> <span class="x-leg x-leg-current">Current</span> <span class="x-leg x-leg-unanswered">Unanswered</span></p>
             <p class="q-counter" id="mockProgress"></p>
             <div class="nav-grid" id="navGrid"></div>
             <button type="button" class="btn btn-green btn-block" id="mockSubmit">Submit Test</button>
@@ -88,7 +96,7 @@
       </div>
 
       <!-- Results screen -->
-      <div id="mockResults" class="hidden results">
+      <div id="mockResults" class="hidden results x-result">
         <h2>Full Test Results</h2>
         <div class="score-ring">
           <svg viewBox="0 0 120 120" width="150" height="150" aria-hidden="true">
@@ -100,18 +108,17 @@
         <p id="mockScoreDetail"></p>
         <p id="mockScoreTime"></p>
         <p id="mockVerdict"></p>
+        <div class="x-stat-tiles" id="mockStatTiles"></div>
 
         <!-- AD PLACEHOLDER: paste your AdSense ad unit <ins> code inside this div. Setup instructions in config.js. -->
         <div class="ad-slot"><span class="ad-label">Advertisement</span></div>
 
         <h2 class="text-center">Section-wise Breakdown</h2>
-        <div class="table-wrap">
-          <table class="pattern-table" id="sectionTable"></table>
-        </div>
+        <div class="x-breakdown" id="sectionTable"></div>
 
         <div class="quiz-actions">
           <button type="button" class="btn btn-green" id="mockRetake">Retake Full Test</button>
-          <a class="btn btn-outline" style="border-color:var(--green);color:var(--green)" href="topics.html">Practice by Topic</a>
+          <a class="btn btn-outline" href="topics.html">Practice by Topic</a>
         </div>
 
         <h2 class="text-center">Review Your Answers</h2>
@@ -130,7 +137,14 @@
     <div class="footer-col">
       <h3>Banks</h3>
       <ul>
-        <li><a href="nbp.html">NBP</a></li><li><a href="sbp.html">SBP</a></li><li><a href="hbl.html">HBL</a></li><li><a href="mcb.html">MCB</a></li><li><a href="ubl.html">UBL</a></li><li><a href="meezan.html">Meezan Bank</a></li><li><a href="allied.html">Allied Bank</a></li><li><a href="bop.html">Bank of Punjab</a></li>
+        <li><a href="ubl.html">UBL</a></li>
+        <li><a href="hbl.html">HBL</a></li>
+        <li><a href="nbp.html">NBP</a></li>
+        <li><a href="sbp.html">SBP</a></li>
+        <li><a href="mcb.html">MCB</a></li>
+        <li><a href="meezan.html">Meezan Bank</a></li>
+        <li><a href="allied.html">Allied Bank</a></li>
+        <li><a href="bop.html">Bank of Punjab</a></li>
       </ul>
     </div>
     <div class="footer-col">

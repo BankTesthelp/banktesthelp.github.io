@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 <link rel="canonical" href="https://banktesthelp.github.io/quiz.html">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BankTest.pk">
@@ -50,19 +50,22 @@
     <div class="quiz-wrap">
 
       <!-- Start screen -->
-      <div id="quizStart" class="quiz-start">
+      <div id="quizStart" class="quiz-start x-start">
+        <p class="x-kicker">Free Bank Test Practice</p>
         <h1 id="quizTopicName">Practice Quiz</h1>
-        <p class="quiz-meta"><span id="quizBankName"></span></p>
-        <p class="quiz-meta" id="quizCountInfo"></p>
+        <div class="x-chips">
+          <span class="x-chip" id="quizBankName"></span>
+          <span class="x-chip" id="quizCountInfo"></span>
+        </div>
         <div class="picker-grid">
           <div class="form-group">
             <label for="bankPick">Bank</label>
             <select id="bankPick">
+              <option value="ubl">United Bank Limited (UBL)</option>
+              <option value="hbl">Habib Bank Limited (HBL)</option>
               <option value="nbp">National Bank of Pakistan (NBP)</option>
               <option value="sbp">State Bank of Pakistan (SBP)</option>
-              <option value="hbl">Habib Bank Limited (HBL)</option>
               <option value="mcb">MCB Bank (MCB)</option>
-              <option value="ubl">United Bank Limited (UBL)</option>
               <option value="meezan">Meezan Bank</option>
               <option value="allied">Allied Bank Limited (Allied)</option>
               <option value="bop">The Bank of Punjab (BOP)</option>
@@ -95,19 +98,25 @@
 
       <!-- Question screen -->
       <div id="quizQuestion" class="hidden">
-        <div class="quiz-topbar"><span id="qTimer">Time: 00:00</span><span id="qScore">Score: 0/0</span></div>
-        <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
-        <p class="q-counter"><span id="qCounter"></span> · <span id="qTopicTag"></span></p>
-        <h2 class="q-text" id="qText"></h2>
-        <div class="options" id="optionsBox"></div>
-        <div class="explanation hidden" id="explanationBox"></div>
-        <div class="quiz-nav">
-          <button type="button" class="btn btn-green hidden" id="nextBtn">Next Question</button>
+        <div class="x-exam-bar">
+          <span id="qTimer" class="x-timer">Time: 00:00</span>
+          <span id="qScore" class="x-score">Score: 0/0</span>
+          <div class="progress-bar"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+        <div class="x-palette" id="paletteBox"></div>
+        <div class="x-qcard">
+          <p class="q-counter"><span id="qCounter"></span> · <span id="qTopicTag"></span></p>
+          <h2 class="q-text" id="qText"></h2>
+          <div class="options" id="optionsBox"></div>
+          <div class="explanation hidden" id="explanationBox"></div>
+          <div class="quiz-nav">
+            <button type="button" class="btn btn-green hidden" id="nextBtn">Next Question</button>
+          </div>
         </div>
       </div>
 
       <!-- Results screen -->
-      <div id="quizResults" class="hidden results">
+      <div id="quizResults" class="hidden results x-result">
         <h2>Your Results</h2>
         <div class="score-ring">
           <svg viewBox="0 0 120 120" width="150" height="150" aria-hidden="true">
@@ -119,14 +128,20 @@
         <p id="scoreDetail"></p>
         <p id="scoreTime"></p>
         <p id="scoreVerdict"></p>
+        <div class="x-stat-tiles">
+          <div class="x-stat-tile"><span class="x-stat-label">Correct</span><strong class="x-stat-value" id="statCorrect">–</strong></div>
+          <div class="x-stat-tile"><span class="x-stat-label">Wrong</span><strong class="x-stat-value" id="statWrong">–</strong></div>
+          <div class="x-stat-tile"><span class="x-stat-label">Time taken</span><strong class="x-stat-value" id="statTime">–</strong></div>
+          <div class="x-stat-tile"><span class="x-stat-label">Pass mark</span><strong class="x-stat-value" id="statPass">60%</strong></div>
+        </div>
 
         <!-- AD PLACEHOLDER: paste your AdSense ad unit <ins> code inside this div. Setup instructions in config.js. -->
         <div class="ad-slot"><span class="ad-label">Advertisement</span></div>
 
         <div class="quiz-actions">
           <button type="button" class="btn btn-green" id="retakeBtn">Retake Quiz</button>
-          <a class="btn btn-outline" style="border-color:var(--green);color:var(--green)" href="topics.html">More Topics</a>
-          <a class="btn btn-outline" style="border-color:var(--green);color:var(--green)" href="mock.html">Try a Full Full Test</a>
+          <a class="btn btn-outline" href="topics.html">More Topics</a>
+          <a class="btn btn-outline" href="mock.html">Try a Full Full Test</a>
         </div>
 
         <h2 class="text-center">Review Your Answers</h2>
@@ -145,7 +160,14 @@
     <div class="footer-col">
       <h3>Banks</h3>
       <ul>
-        <li><a href="nbp.html">NBP</a></li><li><a href="sbp.html">SBP</a></li><li><a href="hbl.html">HBL</a></li><li><a href="mcb.html">MCB</a></li><li><a href="ubl.html">UBL</a></li><li><a href="meezan.html">Meezan Bank</a></li><li><a href="allied.html">Allied Bank</a></li><li><a href="bop.html">Bank of Punjab</a></li>
+        <li><a href="ubl.html">UBL</a></li>
+        <li><a href="hbl.html">HBL</a></li>
+        <li><a href="nbp.html">NBP</a></li>
+        <li><a href="sbp.html">SBP</a></li>
+        <li><a href="mcb.html">MCB</a></li>
+        <li><a href="meezan.html">Meezan Bank</a></li>
+        <li><a href="allied.html">Allied Bank</a></li>
+        <li><a href="bop.html">Bank of Punjab</a></li>
       </ul>
     </div>
     <div class="footer-col">

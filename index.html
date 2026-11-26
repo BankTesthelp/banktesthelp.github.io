@@ -9,7 +9,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css?v=6">
+<link rel="stylesheet" href="style.css?v=7">
 <link rel="canonical" href="https://banktesthelp.github.io/">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="BankTest.pk">
@@ -47,60 +47,93 @@
 </header>
 <main>
 
-  <!-- Hero: simple, no image -->
-  <section class="hero">
-    <div class="container hero-simple">
-      <p class="hero-badge"><span class="badge-dot"></span>Free Practice Tests</p>
-      <h1>Pakistan Bank Test Preparation — <span class="accent-word">Free</span> Practice Quizzes &amp; Full Tests</h1>
-      <p class="hero-tagline">Prepare for NBP, SBP, HBL, MCB, UBL, Meezan, Allied and Bank of Punjab recruitment tests with original practice questions, topic-wise quizzes and full-length tests — completely free.</p>
-      <div class="hero-cta">
-        <a class="btn btn-primary" href="mock.html">Start Full Test</a>
-        <a class="btn btn-secondary" href="topics.html">Start Practicing</a>
+  <!-- NEW HERO: split layout — copy left, live Start Free Test panel right -->
+  <section class="x-hero">
+    <div class="container x-hero-grid">
+      <div class="x-hero-copy">
+        <p class="x-kicker">Free Practice Tests · No Sign-Up</p>
+        <h1>Pakistan Bank Test Preparation — <span class="accent-word">Free</span> Practice Quizzes &amp; Full Tests</h1>
+        <p class="x-hero-tagline">Prepare for NBP, SBP, HBL, MCB, UBL, Meezan, Allied and Bank of Punjab recruitment tests with original practice questions, topic-wise quizzes and full-length tests — completely free.</p>
+        <div class="x-hero-cta">
+          <a class="btn btn-primary" href="mock.html">Start Full Test</a>
+          <a class="btn btn-secondary" href="topics.html">Start Practicing</a>
+        </div>
+        <div class="x-hero-trust">
+          <span>639+ original MCQs</span>
+          <span>8 banks covered</span>
+          <span>100% free forever</span>
+        </div>
       </div>
-      <div class="hero-stats">
-        <div class="stat"><strong>639+</strong><span>Practice MCQs</span></div>
-        <div class="stat"><strong>8</strong><span>Banks Covered</span></div>
-        <div class="stat"><strong>6</strong><span>Test Topics</span></div>
-        <div class="stat"><strong>100%</strong><span>Free</span></div>
+
+      <!-- Live test panel: Bank -> Post -> Test -->
+      <div class="x-panel" id="startTest">
+        <div class="x-panel-head">
+          <p class="x-kicker">Start Free Test</p>
+          <h2>Pick Your Bank &amp; Post</h2>
+          <p>Three taps and you are in the exam hall — just like the real test.</p>
+        </div>
+        <div class="flow-step" id="flowStep1">
+          <div class="flow-step-head"><span class="flow-num">1</span><h3>Select Your Bank</h3></div>
+          <div class="flow-grid" id="bankGrid">
+            <button type="button" class="flow-btn" data-bank="ubl"><strong>UBL</strong><span>United Bank Limited</span></button>
+            <button type="button" class="flow-btn" data-bank="hbl"><strong>HBL</strong><span>Habib Bank Limited</span></button>
+            <button type="button" class="flow-btn" data-bank="nbp"><strong>NBP</strong><span>National Bank of Pakistan</span></button>
+            <button type="button" class="flow-btn" data-bank="sbp"><strong>SBP</strong><span>State Bank of Pakistan</span></button>
+            <button type="button" class="flow-btn" data-bank="mcb"><strong>MCB</strong><span>MCB Bank</span></button>
+            <button type="button" class="flow-btn" data-bank="meezan"><strong>Meezan</strong><span>Meezan Bank</span></button>
+            <button type="button" class="flow-btn" data-bank="allied"><strong>Allied</strong><span>Allied Bank Limited</span></button>
+            <button type="button" class="flow-btn" data-bank="bop"><strong>BOP</strong><span>The Bank of Punjab</span></button>
+          </div>
+        </div>
+        <div class="flow-step hidden" id="flowStep2">
+          <div class="flow-step-head"><span class="flow-num">2</span><h3>Select Post</h3><button type="button" class="link-btn" id="changeBank">&larr; Change bank</button></div>
+          <p class="flow-chosen" id="flowBankName"></p>
+          <div class="flow-grid" id="postGrid"></div>
+        </div>
+        <div class="flow-step hidden" id="flowStep3">
+          <div class="flow-step-head"><span class="flow-num">3</span><h3>Start Test</h3><button type="button" class="link-btn" id="changePost">&larr; Change post</button></div>
+          <p class="flow-chosen" id="flowSummary"></p>
+          <a class="btn btn-primary btn-block" id="flowStartBtn" href="mock.html">Start Test &rarr;</a>
+          <p class="flow-note" id="flowPattern"></p>
+        </div>
       </div>
     </div>
   </section>
 
-
-  <!-- Start your test: Bank -> Post -> Test -->
-  <section class="section flow-section" id="startTest">
+  <!-- Stats / trust strip -->
+  <div class="x-stats-strip">
     <div class="container">
-      <h2 class="text-center">Start Your Test in 3 Easy Steps</h2>
-      <p class="section-lead text-center" style="margin-left:auto;margin-right:auto">Pick your bank, pick the post you are applying for, and start your full mock test — just like the real exam.</p>
+      <div class="x-stat"><strong>639+</strong><span>Practice MCQs</span></div>
+      <div class="x-stat"><strong>8</strong><span>Banks Covered</span></div>
+      <div class="x-stat"><strong>6</strong><span>Test Topics</span></div>
+      <div class="x-stat"><strong>100%</strong><span>Free</span></div>
+    </div>
+  </div>
 
-      <!-- Step 1: Bank -->
-      <div class="flow-step" id="flowStep1">
-        <div class="flow-step-head"><span class="flow-num">1</span><h3>Select Your Bank</h3></div>
-        <div class="flow-grid" id="bankGrid">
-          <button type="button" class="flow-btn" data-bank="ubl"><strong>UBL</strong><span>United Bank Limited</span></button>
-          <button type="button" class="flow-btn" data-bank="hbl"><strong>HBL</strong><span>Habib Bank Limited</span></button>
-          <button type="button" class="flow-btn" data-bank="nbp"><strong>NBP</strong><span>National Bank of Pakistan</span></button>
-          <button type="button" class="flow-btn" data-bank="sbp"><strong>SBP</strong><span>State Bank of Pakistan</span></button>
-          <button type="button" class="flow-btn" data-bank="mcb"><strong>MCB</strong><span>MCB Bank</span></button>
-          <button type="button" class="flow-btn" data-bank="meezan"><strong>Meezan</strong><span>Meezan Bank</span></button>
-          <button type="button" class="flow-btn" data-bank="allied"><strong>Allied</strong><span>Allied Bank Limited</span></button>
-          <button type="button" class="flow-btn" data-bank="bop"><strong>BOP</strong><span>The Bank of Punjab</span></button>
+  <!-- Featured mock-test showcase -->
+  <section class="section">
+    <div class="container">
+      <div class="x-showcase">
+        <div>
+          <p class="x-kicker">Featured · Full Mock Test</p>
+          <h2>Take the Full Test — Just Like the Real Exam</h2>
+          <p>50 mixed questions across all six sections, a 60-minute countdown, a question navigator, and a section-wise score breakdown at the end. BOP's online-assessment mock runs 60 questions in 75 minutes.</p>
+          <div class="x-chip-row">
+            <span class="x-chip">English <b>10</b></span>
+            <span class="x-chip">Mathematics <b>10</b></span>
+            <span class="x-chip">IQ <b>8</b></span>
+            <span class="x-chip">GK <b>8</b></span>
+            <span class="x-chip">Current Affairs <b>7</b></span>
+            <span class="x-chip">Banking <b>7</b></span>
+          </div>
+          <a class="btn btn-primary" href="mock.html">Start Full Test &rarr;</a>
         </div>
-      </div>
-
-      <!-- Step 2: Post -->
-      <div class="flow-step hidden" id="flowStep2">
-        <div class="flow-step-head"><span class="flow-num">2</span><h3>Select Post</h3><button type="button" class="link-btn" id="changeBank">&larr; Change bank</button></div>
-        <p class="flow-chosen" id="flowBankName"></p>
-        <div class="flow-grid" id="postGrid"></div>
-      </div>
-
-      <!-- Step 3: Start test -->
-      <div class="flow-step hidden" id="flowStep3">
-        <div class="flow-step-head"><span class="flow-num">3</span><h3>Start Test</h3><button type="button" class="link-btn" id="changePost">&larr; Change post</button></div>
-        <p class="flow-chosen" id="flowSummary"></p>
-        <a class="btn btn-primary btn-block" id="flowStartBtn" href="mock.html">Start Test &rarr;</a>
-        <p class="flow-note" id="flowPattern"></p>
+        <div class="x-showcase-side">
+          <div class="big-time">60:00</div>
+          <span>50 questions · timed</span>
+          <span>Pass mark: 60%</span>
+          <span>Instant results + review</span>
+        </div>
       </div>
     </div>
   </section>
@@ -122,76 +155,71 @@
   <!-- AD PLACEHOLDER: paste your AdSense ad unit <ins> code inside this div. Setup instructions in config.js. -->
   <div class="ad-slot"><span class="ad-label">Advertisement</span></div>
 
-  <!-- Banks -->
+  <!-- Banks: premium grid with pattern chips -->
   <section class="section">
     <div class="container">
-      <h2>Prepare by Bank</h2>
-      <p class="section-lead">Choose the bank you are applying to. Each bank page covers typical test patterns, syllabus breakdowns, preparation tips and direct links to practice quizzes.</p>
-      <div class="card-grid">
-
-        
-
-        <article class="bank-card">
-          <h3>UBL</h3>
-          <p class="bank-full-name">United Bank Limited</p>
+      <div class="x-sec-head">
+        <p class="x-kicker">Prepare by Bank</p>
+        <h2>Choose Your Bank</h2>
+        <p>Each bank page covers its typical test pattern, syllabus breakdown, preparation tips and direct links to practice quizzes.</p>
+      </div>
+      <div class="x-bank-grid">
+        <article class="x-bank-tile">
+          <div class="x-bank-code">UBL <span class="x-bank-idx">01</span></div>
+          <p class="x-bank-name">United Bank Limited</p>
           <p>A leading private-sector bank. Practice the quantitative, verbal and current-affairs sections UBL tests check.</p>
+          <div class="x-chip-row"><span class="x-chip">50 Q</span><span class="x-chip">60 min</span></div>
           <a class="card-link" href="ubl.html">Open UBL page &rarr;</a>
         </article>
-
-        <article class="bank-card">
-          <h3>HBL</h3>
-          <p class="bank-full-name">Habib Bank Limited</p>
+        <article class="x-bank-tile">
+          <div class="x-bank-code">HBL <span class="x-bank-idx">02</span></div>
+          <p class="x-bank-name">Habib Bank Limited</p>
           <p>Pakistan's largest commercial bank. Practice English, quantitative and reasoning sections for HBL tests.</p>
+          <div class="x-chip-row"><span class="x-chip">50 Q</span><span class="x-chip">60 min</span></div>
           <a class="card-link" href="hbl.html">Open HBL page &rarr;</a>
         </article>
-
-        <article class="bank-card">
-          <div class="badge-row"><span class="badge">Full guide</span></div>
-          <h3>NBP</h3>
-          <p class="bank-full-name">National Bank of Pakistan</p>
+        <article class="x-bank-tile">
+          <div class="x-bank-code">NBP <span class="x-bank-idx">03</span></div>
+          <p class="x-bank-name">National Bank of Pakistan</p>
           <p>Pakistan's largest public-sector bank. Practice MTO, OG-II and teller test patterns with original quizzes.</p>
+          <div class="x-chip-row"><span class="x-chip">50 Q</span><span class="x-chip">60 min</span><span class="x-chip">Full guide</span></div>
           <a class="card-link" href="nbp.html">Open NBP guide &rarr;</a>
         </article>
-
-        <article class="bank-card">
-          <div class="badge-row"><span class="badge">Full guide</span></div>
-          <h3>SBP</h3>
-          <p class="bank-full-name">State Bank of Pakistan</p>
+        <article class="x-bank-tile">
+          <div class="x-bank-code">SBP <span class="x-bank-idx">04</span></div>
+          <p class="x-bank-name">State Bank of Pakistan</p>
           <p>Pakistan's central bank. Prepare for YPIP, SBOTS and officer-level tests with topic-wise practice.</p>
+          <div class="x-chip-row"><span class="x-chip">50 Q</span><span class="x-chip">60 min</span><span class="x-chip">Full guide</span></div>
           <a class="card-link" href="sbp.html">Open SBP guide &rarr;</a>
         </article>
-
-        <article class="bank-card">
-          <h3>MCB</h3>
-          <p class="bank-full-name">MCB Bank</p>
+        <article class="x-bank-tile">
+          <div class="x-bank-code">MCB <span class="x-bank-idx">05</span></div>
+          <p class="x-bank-name">MCB Bank</p>
           <p>One of Pakistan's oldest and most profitable banks. Sharpen math, IQ and banking knowledge for MCB recruitment.</p>
+          <div class="x-chip-row"><span class="x-chip">50 Q</span><span class="x-chip">60 min</span></div>
           <a class="card-link" href="mcb.html">Open MCB page &rarr;</a>
         </article>
-
-        <article class="bank-card">
-          <h3>Meezan</h3>
-          <p class="bank-full-name">Meezan Bank</p>
+        <article class="x-bank-tile">
+          <div class="x-bank-code">Meezan <span class="x-bank-idx">06</span></div>
+          <p class="x-bank-name">Meezan Bank</p>
           <p>Pakistan's first and largest Islamic bank. Practice banking quizzes plus Islamic banking concepts.</p>
+          <div class="x-chip-row"><span class="x-chip">50 Q</span><span class="x-chip">60 min</span></div>
           <a class="card-link" href="meezan.html">Open Meezan page &rarr;</a>
         </article>
-
-        <article class="bank-card">
-          <h3>Allied</h3>
-          <p class="bank-full-name">Allied Bank</p>
+        <article class="x-bank-tile">
+          <div class="x-bank-code">Allied <span class="x-bank-idx">07</span></div>
+          <p class="x-bank-name">Allied Bank</p>
           <p>A major commercial bank with nationwide hiring. Build speed and accuracy with topic-wise quizzes.</p>
+          <div class="x-chip-row"><span class="x-chip">50 Q</span><span class="x-chip">60 min</span></div>
           <a class="card-link" href="allied.html">Open Allied page &rarr;</a>
         </article>
-
-        <article class="bank-card">
-          <div class="badge-row"><span class="badge">Starter guide</span></div>
-          <h3>BOP</h3>
-          <p class="bank-full-name">Bank of Punjab</p>
+        <article class="x-bank-tile">
+          <div class="x-bank-code">BOP <span class="x-bank-idx">08</span></div>
+          <p class="x-bank-name">Bank of Punjab</p>
           <p>Punjab's provincial commercial bank. Start with essential practice for English, math and GK sections.</p>
+          <div class="x-chip-row"><span class="x-chip">60 Q</span><span class="x-chip">75 min</span><span class="x-chip">Starter guide</span></div>
           <a class="card-link" href="bop.html">Open BOP page &rarr;</a>
         </article>
-
-      
-
       </div>
     </div>
   </section>
@@ -199,42 +227,63 @@
   <!-- AD PLACEHOLDER: paste your AdSense ad unit <ins> code inside this div. Setup instructions in config.js. -->
   <div class="ad-slot"><span class="ad-label">Advertisement</span></div>
 
-  <!-- Topics -->
+  <!-- Topics: numbered rows -->
   <section class="section section-alt">
     <div class="container">
-      <h2>Practice by Topic</h2>
-      <p class="section-lead">Bank recruitment tests in Pakistan typically combine these six areas. Pick one and start a 15-question practice quiz.</p>
-      <div class="card-grid">
-        <article class="topic-card">
-          <h3>English</h3>
-          <p>Grammar, vocabulary, synonyms, antonyms and comprehension passages.</p>
+      <div class="x-sec-head">
+        <p class="x-kicker">Practice by Topic</p>
+        <h2>Six Sections, One Paper</h2>
+        <p>Bank recruitment tests in Pakistan typically combine these six areas. Pick one and start a 15-question practice quiz.</p>
+      </div>
+      <div class="x-topic-rows">
+        <div class="x-topic-row">
+          <span class="x-num">01</span>
+          <div>
+            <h3>English</h3>
+            <p>Grammar, vocabulary, synonyms, antonyms and comprehension passages.</p>
+          </div>
           <a class="card-link" href="quiz.html?bank=nbp&amp;topic=english&amp;count=15">Start English quiz &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>Mathematics</h3>
-          <p>Percentages, ratios, averages, profit and loss, and word problems.</p>
+        </div>
+        <div class="x-topic-row">
+          <span class="x-num">02</span>
+          <div>
+            <h3>Mathematics</h3>
+            <p>Percentages, ratios, averages, profit and loss, and word problems.</p>
+          </div>
           <a class="card-link" href="quiz.html?bank=nbp&amp;topic=math&amp;count=15">Start Math quiz &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>IQ &amp; Reasoning</h3>
-          <p>Series, analogies, coding-decoding, blood relations and logical puzzles.</p>
+        </div>
+        <div class="x-topic-row">
+          <span class="x-num">03</span>
+          <div>
+            <h3>IQ &amp; Reasoning</h3>
+            <p>Series, analogies, coding-decoding, blood relations and logical puzzles.</p>
+          </div>
           <a class="card-link" href="quiz.html?bank=nbp&amp;topic=iq&amp;count=15">Start IQ quiz &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>General Knowledge</h3>
-          <p>Pakistan studies, geography, science basics and everyday facts.</p>
+        </div>
+        <div class="x-topic-row">
+          <span class="x-num">04</span>
+          <div>
+            <h3>General Knowledge</h3>
+            <p>Pakistan studies, geography, science basics and everyday facts.</p>
+          </div>
           <a class="card-link" href="quiz.html?bank=nbp&amp;topic=gk&amp;count=15">Start GK quiz &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>Current Affairs</h3>
-          <p>Recent national and international events, economy and sports.</p>
+        </div>
+        <div class="x-topic-row">
+          <span class="x-num">05</span>
+          <div>
+            <h3>Current Affairs</h3>
+            <p>Recent national and international events, economy and sports.</p>
+          </div>
           <a class="card-link" href="quiz.html?bank=nbp&amp;topic=current-affairs&amp;count=15">Start quiz &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>Banking &amp; Finance</h3>
-          <p>Banking terms, SBP functions, interest, Islamic banking basics.</p>
+        </div>
+        <div class="x-topic-row">
+          <span class="x-num">06</span>
+          <div>
+            <h3>Banking &amp; Finance</h3>
+            <p>Banking terms, SBP functions, interest, Islamic banking basics.</p>
+          </div>
           <a class="card-link" href="quiz.html?bank=nbp&amp;topic=banking&amp;count=15">Start Banking quiz &rarr;</a>
-        </article>
+        </div>
       </div>
     </div>
   </section>
@@ -242,7 +291,10 @@
   <!-- How it works -->
   <section class="section">
     <div class="container">
-      <h2>How BankTest.pk Works</h2>
+      <div class="x-sec-head">
+        <p class="x-kicker">How It Works</p>
+        <h2>Three Steps to Exam Day</h2>
+      </div>
       <div class="steps">
         <div class="step">
           <div class="step-num">1</div>
@@ -263,42 +315,63 @@
     </div>
   </section>
 
-  <!-- Preparation Guides -->
+  <!-- Preparation Guides: editorial rows -->
   <section class="section section-alt">
     <div class="container">
-      <h2>Preparation Guides</h2>
-      <p class="section-lead">Free, in-depth guides written for Pakistan bank tests — read the strategy first, then practise with the quizzes.</p>
-      <div class="card-grid">
-        <article class="topic-card">
-          <h3>SBOTS 29th Batch Guide</h3>
-          <p>Complete SBOTS preparation guide: test scheme, subject-wise strategy, a six-week study plan and the free SBOTS book.</p>
-          <a class="card-link" href="sbots-guide.html">Read the SBOTS guide &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>Meezan Bank PBO Guide</h3>
-          <p>How to prepare for the Meezan Personal Banking Officer test, including Islamic banking concepts explained simply.</p>
-          <a class="card-link" href="meezan-pbo-guide.html">Read the PBO guide &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>English Preparation Guide</h3>
-          <p>Vocabulary strategy, the grammar areas that carry the marks, comprehension technique and a daily routine.</p>
-          <a class="card-link" href="english-preparation-guide.html">Read the English guide &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>Math Preparation Guide</h3>
-          <p>Percentages, ratios, averages, profit and loss, interest and time-and-work — with fully worked examples.</p>
-          <a class="card-link" href="math-preparation-guide.html">Read the Math guide &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>Bank Interview Tips</h3>
-          <p>What interview panels ask, how to prepare your answers, dress and etiquette, and the documents to carry.</p>
-          <a class="card-link" href="bank-interview-tips.html">Read interview tips &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>Complete Study Plan</h3>
-          <p>Our full 4–6 week bank test study plan that ties every section together, week by week.</p>
-          <a class="card-link" href="preparation-guide.html">Read the study plan &rarr;</a>
-        </article>
+      <div class="x-sec-head">
+        <p class="x-kicker">Preparation Guides</p>
+        <h2>Read the Strategy First</h2>
+        <p>Free, in-depth guides written for Pakistan bank tests — read the strategy first, then practise with the quizzes.</p>
+      </div>
+      <div class="x-guide-rows">
+        <div class="x-guide-row">
+          <span class="x-num">01</span>
+          <div>
+            <h3><a href="sbots-guide.html">SBOTS 29th Batch Guide</a></h3>
+            <p>Complete SBOTS preparation guide: test scheme, subject-wise strategy, a six-week study plan and the free SBOTS book.</p>
+          </div>
+          <a class="card-link" href="sbots-guide.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">02</span>
+          <div>
+            <h3><a href="meezan-pbo-guide.html">Meezan Bank PBO Guide</a></h3>
+            <p>How to prepare for the Meezan Personal Banking Officer test, including Islamic banking concepts explained simply.</p>
+          </div>
+          <a class="card-link" href="meezan-pbo-guide.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">03</span>
+          <div>
+            <h3><a href="english-preparation-guide.html">English Preparation Guide</a></h3>
+            <p>Vocabulary strategy, the grammar areas that carry the marks, comprehension technique and a daily routine.</p>
+          </div>
+          <a class="card-link" href="english-preparation-guide.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">04</span>
+          <div>
+            <h3><a href="math-preparation-guide.html">Math Preparation Guide</a></h3>
+            <p>Percentages, ratios, averages, profit and loss, interest and time-and-work — with fully worked examples.</p>
+          </div>
+          <a class="card-link" href="math-preparation-guide.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">05</span>
+          <div>
+            <h3><a href="bank-interview-tips.html">Bank Interview Tips</a></h3>
+            <p>What interview panels ask, how to prepare your answers, dress and etiquette, and the documents to carry.</p>
+          </div>
+          <a class="card-link" href="bank-interview-tips.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">06</span>
+          <div>
+            <h3><a href="preparation-guide.html">Complete Study Plan</a></h3>
+            <p>Our full 4–6 week bank test study plan that ties every section together, week by week.</p>
+          </div>
+          <a class="card-link" href="preparation-guide.html">Read &rarr;</a>
+        </div>
       </div>
     </div>
   </section>
@@ -306,67 +379,103 @@
   <!-- Test Patterns & More Guides -->
   <section class="section">
     <div class="container">
-      <h2>Test Patterns &amp; More Guides</h2>
-      <p class="section-lead">Bank-by-bank test patterns, syllabus breakdowns and focused skill guides — know the paper before you sit it.</p>
-      <div class="card-grid">
-        <article class="topic-card">
-          <h3>SBOTS Test Pattern &amp; Syllabus</h3>
-          <p>The SBOTS 29th batch pattern in detail: sections, typical marks distribution and the subject-wise syllabus.</p>
-          <a class="card-link" href="sbots-test-pattern-syllabus.html">Read the SBOTS pattern &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>Meezan PBO Test Pattern</h3>
-          <p>PBO test sections and syllabus, including the Islamic banking portion most candidates skip.</p>
-          <a class="card-link" href="meezan-pbo-test-pattern.html">Read the PBO pattern &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>UBL OG-IV / BSO / RE Pattern</h3>
-          <p>Typical UBL test pattern for OG-IV, BSO and RE roles, with role-specific preparation notes.</p>
-          <a class="card-link" href="ubl-test-pattern.html">Read the UBL pattern &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>NBP MTO &amp; OG-II Pattern</h3>
-          <p>NBP MTO and OG-II test sections, syllabus and marks guidance for Pakistan's largest public bank.</p>
-          <a class="card-link" href="nbp-mto-test-pattern.html">Read the NBP pattern &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>HBL Test Pattern</h3>
-          <p>HBL recruitment test pattern and syllabus — and why time management decides these tests.</p>
-          <a class="card-link" href="hbl-test-pattern.html">Read the HBL pattern &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>Bank Jobs in Pakistan 2026</h3>
-          <p>Which banks hire, typical eligibility, entry routes and how recruitment tests actually work.</p>
-          <a class="card-link" href="bank-jobs-in-pakistan.html">Read the jobs overview &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>Beginner's Preparation Guide</h3>
-          <p>Bank test ki tayyari kahan se shuru karein — a step-by-step plan for your first two weeks.</p>
-          <a class="card-link" href="bank-test-preparation-beginners.html">Start as a beginner &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>IQ &amp; Reasoning Preparation</h3>
-          <p>Series, analogies, coding-decoding and blood relations explained with worked examples.</p>
-          <a class="card-link" href="iq-test-preparation.html">Read the IQ guide &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>Current Affairs Preparation</h3>
-          <p>The monthly routine that turns daily news into current-affairs marks — twenty minutes a day.</p>
-          <a class="card-link" href="current-affairs-preparation.html">Read the CA method &rarr;</a>
-        </article>
-        <article class="topic-card">
-          <h3>Banking Concepts Explained</h3>
-          <p>Interest, Islamic banking contracts, State Bank functions and account types in simple language.</p>
-          <a class="card-link" href="banking-mcqs-concepts.html">Read banking concepts &rarr;</a>
-        </article>
+      <div class="x-sec-head">
+        <p class="x-kicker">Test Patterns</p>
+        <h2>Know the Paper Before You Sit It</h2>
+        <p>Bank-by-bank test patterns, syllabus breakdowns and focused skill guides.</p>
+      </div>
+      <div class="x-guide-rows">
+        <div class="x-guide-row">
+          <span class="x-num">01</span>
+          <div>
+            <h3><a href="sbots-test-pattern-syllabus.html">SBOTS Test Pattern &amp; Syllabus</a></h3>
+            <p>The SBOTS 29th batch pattern in detail: sections, typical marks distribution and the subject-wise syllabus.</p>
+          </div>
+          <a class="card-link" href="sbots-test-pattern-syllabus.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">02</span>
+          <div>
+            <h3><a href="meezan-pbo-test-pattern.html">Meezan PBO Test Pattern</a></h3>
+            <p>PBO test sections and syllabus, including the Islamic banking portion most candidates skip.</p>
+          </div>
+          <a class="card-link" href="meezan-pbo-test-pattern.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">03</span>
+          <div>
+            <h3><a href="ubl-test-pattern.html">UBL OG-IV / BSO / RE Pattern</a></h3>
+            <p>Typical UBL test pattern for OG-IV, BSO and RE roles, with role-specific preparation notes.</p>
+          </div>
+          <a class="card-link" href="ubl-test-pattern.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">04</span>
+          <div>
+            <h3><a href="nbp-mto-test-pattern.html">NBP MTO &amp; OG-II Pattern</a></h3>
+            <p>NBP MTO and OG-II test sections, syllabus and marks guidance for Pakistan's largest public bank.</p>
+          </div>
+          <a class="card-link" href="nbp-mto-test-pattern.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">05</span>
+          <div>
+            <h3><a href="hbl-test-pattern.html">HBL Test Pattern</a></h3>
+            <p>HBL recruitment test pattern and syllabus — and why time management decides these tests.</p>
+          </div>
+          <a class="card-link" href="hbl-test-pattern.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">06</span>
+          <div>
+            <h3><a href="bank-jobs-in-pakistan.html">Bank Jobs in Pakistan 2026</a></h3>
+            <p>Which banks hire, typical eligibility, entry routes and how recruitment tests actually work.</p>
+          </div>
+          <a class="card-link" href="bank-jobs-in-pakistan.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">07</span>
+          <div>
+            <h3><a href="bank-test-preparation-beginners.html">Beginner's Preparation Guide</a></h3>
+            <p>Bank test ki tayyari kahan se shuru karein — a step-by-step plan for your first two weeks.</p>
+          </div>
+          <a class="card-link" href="bank-test-preparation-beginners.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">08</span>
+          <div>
+            <h3><a href="iq-test-preparation.html">IQ &amp; Reasoning Preparation</a></h3>
+            <p>Series, analogies, coding-decoding and blood relations explained with worked examples.</p>
+          </div>
+          <a class="card-link" href="iq-test-preparation.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">09</span>
+          <div>
+            <h3><a href="current-affairs-preparation.html">Current Affairs Preparation</a></h3>
+            <p>The monthly routine that turns daily news into current-affairs marks — twenty minutes a day.</p>
+          </div>
+          <a class="card-link" href="current-affairs-preparation.html">Read &rarr;</a>
+        </div>
+        <div class="x-guide-row">
+          <span class="x-num">10</span>
+          <div>
+            <h3><a href="banking-mcqs-concepts.html">Banking Concepts Explained</a></h3>
+            <p>Interest, Islamic banking contracts, State Bank functions and account types in simple language.</p>
+          </div>
+          <a class="card-link" href="banking-mcqs-concepts.html">Read &rarr;</a>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- FAQ -->
-  <section class="section">
+  <section class="section section-alt">
     <div class="container">
-      <h2>Frequently Asked Questions</h2>
+      <div class="x-sec-head">
+        <p class="x-kicker">Questions</p>
+        <h2>Frequently Asked Questions</h2>
+      </div>
       <div class="faq">
         <div class="faq-item">
           <button class="faq-q" aria-expanded="false">Are these real past papers?</button>
@@ -406,11 +515,11 @@
     <div class="footer-col">
       <h3>Banks</h3>
       <ul>
+        <li><a href="ubl.html">UBL</a></li>
+        <li><a href="hbl.html">HBL</a></li>
         <li><a href="nbp.html">NBP</a></li>
         <li><a href="sbp.html">SBP</a></li>
-        <li><a href="hbl.html">HBL</a></li>
         <li><a href="mcb.html">MCB</a></li>
-        <li><a href="ubl.html">UBL</a></li>
         <li><a href="meezan.html">Meezan Bank</a></li>
         <li><a href="allied.html">Allied Bank</a></li>
         <li><a href="bop.html">Bank of Punjab</a></li>

@@ -20,18 +20,24 @@
     "pbo-recent-2026": "MEEZAN BANK LIMITED \u2014 Personal Banking Officer (PBO) \u2014 Written Test Preparation (60 Multiple Choice Questions)",
     "sbots-2026": "SBP \u2014 State Bank Officers Training Scheme (SBOTS) 29th Batch (OG-2) \u2014 Test Preparation 2026 (60 Questions)"
   };
-  // How many questions to pull from each topic (sums to 50)
-  var PER_TOPIC = { "english": 10, "math": 10, "iq": 8, "gk": 8, "current-affairs": 7, "banking": 7 };
+  // Question count per topic and time limit per bank.
+  // Default = standard 50-question / 60-minute full test.
+  // BOP's current online assessment is 60 MCQs in about 75 minutes.
+  var DEFAULT_MOCK = { minutes: 60, perTopic: { "english": 10, "math": 10, "iq": 8, "gk": 8, "current-affairs": 7, "banking": 7 } };
+  var MOCK_CONFIGS = {
+    bop: { minutes: 75, perTopic: { "english": 12, "math": 12, "iq": 12, "gk": 10, "current-affairs": 6, "banking": 8 } }
+  };
+  function mockConfig(bank) { return MOCK_CONFIGS[bank] || DEFAULT_MOCK; }
 
   var PASS = (typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.quizPassPercent) || 60;
-  var MINUTES = (typeof SITE_CONFIG !== "undefined" && SITE_CONFIG.mockMinutes) || 60;
 
   var state = {
     bank: null,
+    config: DEFAULT_MOCK,
     questions: [],   // {q, options, answer, explanation, topic}
     index: 0,
     chosen: [],      // chosen option index per question, null = unanswered
-    secondsLeft: MINUTES * 60,
+    secondsLeft: DEFAULT_MOCK.minutes * 60,
     timerId: null,
     submitted: false
   };
@@ -65,20 +71,22 @@
     });
     el("mockInfo").textContent =
       state.questions.length ? "" :
-      TOPICS.reduce(function (n, t) { return n + PER_TOPIC[t]; }, 0) +
-      " mixed questions · " + MINUTES + " minutes · pass at " + PASS + "%";
+      TOPICS.reduce(function (n, t) { return n + DEFAULT_MOCK.perTopic[t]; }, 0) +
+      " mixed questions · " + DEFAULT_MOCK.minutes + " minutes · pass at " + PASS + "%" +
+      " (BOP online-assessment mock: 60 questions · 75 minutes)";
   }
 
   /* ---------- Load all topics ---------- */
   function loadMock(bank) {
     state.bank = bank;
+    state.config = mockConfig(bank);
     el("mockStart").innerHTML = '<p>Loading your mock test…</p>';
     var loads = TOPICS.map(function (t) {
       return fetch("" + bank + "-" + t + ".json")
         .then(function (r) { if (!r.ok) throw new Error(t); return r.json(); })
         .then(function (d) {
           var pool = shuffle((d.questions || []).slice());
-          return pool.slice(0, PER_TOPIC[t]).map(function (q) {
+          return pool.slice(0, state.config.perTopic[t]).map(function (q) {
             return { q: q.q, options: q.options, answer: q.answer, explanation: q.explanation, topic: t };
           });
         });
@@ -104,7 +112,7 @@
   function beginTest() {
     el("mockStart").classList.add("hidden");
     el("mockTest").classList.remove("hidden");
-    state.secondsLeft = MINUTES * 60;
+    state.secondsLeft = state.config.minutes * 60;
     updateTimer();
     state.timerId = setInterval(tick, 1000);
     buildNav();
@@ -282,5 +290,9 @@
     el("mockNext").addEventListener("click", function () {
       if (state.index < state.questions.length - 1) renderQ(state.index + 1);
     });
+    // Deep link: mock.html?bank=bop starts the BOP mock straight away.
+    var params = new URLSearchParams(window.location.search);
+    var bank = (params.get("bank") || "").toLowerCase();
+    if (bank && BANK_NAMES[bank]) loadMock(bank);
   });
 })();

@@ -4,48 +4,48 @@
 
 ## Practice tests
 
-- [Full Test](https://banktesthelp.github.io/mock.html): a complete timed practice test mixing all subjects
-- [All Topics](https://banktesthelp.github.io/topics.html): subject-wise practice quizzes (English, math, IQ, general knowledge, banking, current affairs)
-- [State Bank / SBOTS](https://banktesthelp.github.io/sbp.html): SBP and SBOTS 29th Batch practice
-- [Meezan Bank](https://banktesthelp.github.io/meezan.html): Meezan Bank PBO practice with Islamic banking questions
-- [UBL](https://banktesthelp.github.io/ubl.html): UBL OG-IV, BSO and Relationship Executive practice
-- [NBP](https://banktesthelp.github.io/nbp.html): National Bank MTO and OG-II practice
-- [HBL](https://banktesthelp.github.io/hbl.html): HBL recruitment test practice
-- [MCB](https://banktesthelp.github.io/mcb.html): MCB Bank test practice
-- [Allied Bank](https://banktesthelp.github.io/allied.html): Allied Bank test practice
-- [Bank of Punjab](https://banktesthelp.github.io/bop.html): BOP test practice
+- [Full Test](https://banktestprep.banktesthelp.github.io/mock.html): a complete timed practice test mixing all subjects
+- [All Topics](https://banktestprep.banktesthelp.github.io/topics.html): subject-wise practice quizzes (English, math, IQ, general knowledge, banking, current affairs)
+- [State Bank / SBOTS](https://banktestprep.banktesthelp.github.io/sbp.html): SBP and SBOTS 29th Batch practice
+- [Meezan Bank](https://banktestprep.banktesthelp.github.io/meezan.html): Meezan Bank PBO practice with Islamic banking questions
+- [UBL](https://banktestprep.banktesthelp.github.io/ubl.html): UBL OG-IV, BSO and Relationship Executive practice
+- [NBP](https://banktestprep.banktesthelp.github.io/nbp.html): National Bank MTO and OG-II practice
+- [HBL](https://banktestprep.banktesthelp.github.io/hbl.html): HBL recruitment test practice
+- [MCB](https://banktestprep.banktesthelp.github.io/mcb.html): MCB Bank test practice
+- [Allied Bank](https://banktestprep.banktesthelp.github.io/allied.html): Allied Bank test practice
+- [Bank of Punjab](https://banktestprep.banktesthelp.github.io/bop.html): BOP test practice
 
 ## Preparation guides
 
-- [SBOTS Preparation Guide](https://banktesthelp.github.io/sbots-guide.html)
-- [SBOTS Test Pattern and Syllabus](https://banktesthelp.github.io/sbots-test-pattern-syllabus.html)
-- [Meezan PBO Guide](https://banktesthelp.github.io/meezan-pbo-guide.html)
-- [Meezan PBO Test Pattern](https://banktesthelp.github.io/meezan-pbo-test-pattern.html)
-- [UBL Test Pattern](https://banktesthelp.github.io/ubl-test-pattern.html)
-- [NBP MTO Test Pattern](https://banktesthelp.github.io/nbp-mto-test-pattern.html)
-- [HBL Test Pattern](https://banktesthelp.github.io/hbl-test-pattern.html)
-- [Bank Jobs in Pakistan](https://banktesthelp.github.io/bank-jobs-in-pakistan.html)
-- [Bank Test Preparation for Beginners](https://banktesthelp.github.io/bank-test-preparation-beginners.html)
-- [English Preparation Guide](https://banktesthelp.github.io/english-preparation-guide.html)
-- [Math Preparation Guide](https://banktesthelp.github.io/math-preparation-guide.html)
-- [IQ Test Preparation](https://banktesthelp.github.io/iq-test-preparation.html)
-- [Current Affairs Preparation](https://banktesthelp.github.io/current-affairs-preparation.html)
-- [Banking MCQs and Concepts](https://banktesthelp.github.io/banking-mcqs-concepts.html)
-- [Bank Interview Tips](https://banktesthelp.github.io/bank-interview-tips.html)
-- [Complete Study Plan](https://banktesthelp.github.io/preparation-guide.html)
-- [Test Day Tips](https://banktesthelp.github.io/test-day-tips.html)
+- [SBOTS Preparation Guide](https://banktestprep.banktesthelp.github.io/sbots-guide.html)
+- [SBOTS Test Pattern and Syllabus](https://banktestprep.banktesthelp.github.io/sbots-test-pattern-syllabus.html)
+- [Meezan PBO Guide](https://banktestprep.banktesthelp.github.io/meezan-pbo-guide.html)
+- [Meezan PBO Test Pattern](https://banktestprep.banktesthelp.github.io/meezan-pbo-test-pattern.html)
+- [UBL Test Pattern](https://banktestprep.banktesthelp.github.io/ubl-test-pattern.html)
+- [NBP MTO Test Pattern](https://banktestprep.banktesthelp.github.io/nbp-mto-test-pattern.html)
+- [HBL Test Pattern](https://banktestprep.banktesthelp.github.io/hbl-test-pattern.html)
+- [Bank Jobs in Pakistan](https://banktestprep.banktesthelp.github.io/bank-jobs-in-pakistan.html)
+- [Bank Test Preparation for Beginners](https://banktestprep.banktesthelp.github.io/bank-test-preparation-beginners.html)
+- [English Preparation Guide](https://banktestprep.banktesthelp.github.io/english-preparation-guide.html)
+- [Math Preparation Guide](https://banktestprep.banktesthelp.github.io/math-preparation-guide.html)
+- [IQ Test Preparation](https://banktestprep.banktesthelp.github.io/iq-test-preparation.html)
+- [Current Affairs Preparation](https://banktestprep.banktesthelp.github.io/current-affairs-preparation.html)
+- [Banking MCQs and Concepts](https://banktestprep.banktesthelp.github.io/banking-mcqs-concepts.html)
+- [Bank Interview Tips](https://banktestprep.banktesthelp.github.io/bank-interview-tips.html)
+- [Complete Study Plan](https://banktestprep.banktesthelp.github.io/preparation-guide.html)
+- [Test Day Tips](https://banktestprep.banktesthelp.github.io/test-day-tips.html)
 
 ## Free book
 
-- [SBOTS Batch 29 Free Preparation Book (PDF)](https://banktesthelp.github.io/sbots-batch-29-free-preparation-book.pdf): 400 original MCQs with answers and explanations, free to download
+- [SBOTS Batch 29 Free Preparation Book (PDF)](https://banktestprep.banktesthelp.github.io/sbots-batch-29-free-preparation-book.pdf): 400 original MCQs with answers and explanations, free to download
 
 ## About
 
-- [About BankTest.pk](https://banktesthelp.github.io/about.html)
-- [Contact](https://banktesthelp.github.io/contact.html)
-- [Privacy Policy](https://banktesthelp.github.io/privacy-policy.html)
-- [Terms](https://banktesthelp.github.io/terms.html)
-- [Disclaimer](https://banktesthelp.github.io/disclaimer.html)
+- [About BankTest.pk](https://banktestprep.banktesthelp.github.io/about.html)
+- [Contact](https://banktestprep.banktesthelp.github.io/contact.html)
+- [Privacy Policy](https://banktestprep.banktesthelp.github.io/privacy-policy.html)
+- [Terms](https://banktestprep.banktesthelp.github.io/terms.html)
+- [Disclaimer](https://banktestprep.banktesthelp.github.io/disclaimer.html)
 
 ## Full site text
 

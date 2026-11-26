@@ -46,3 +46,7 @@
 - [Privacy Policy](https://banktesthelp.github.io/privacy-policy.html)
 - [Terms](https://banktesthelp.github.io/terms.html)
 - [Disclaimer](https://banktesthelp.github.io/disclaimer.html)
+
+## Full site text
+
+- [Full site text (llms-full.txt)](https://banktesthelp.github.io/llms-full.txt): the complete text of all 34 pages in Markdown, for AI assistants and search engines

@@ -855,3 +855,5 @@ li { margin-bottom: 0.35em; }
   html { scroll-behavior: auto; }
   .btn, .card, .bank-card, .topic-card, .option-btn { transition: none; }
 }
+
+.byline { font-size: 0.9rem; color: var(--muted); margin: 0.35rem 0 1.1rem; }

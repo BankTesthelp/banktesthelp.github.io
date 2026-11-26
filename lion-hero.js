@@ -51,7 +51,7 @@
     }
 
     function fetchConfig(attempt) {
-      return fetch(base + 'lion-sprite-config.json?v=3', { credentials: 'same-origin' })
+      return fetch(base + 'lion-sprite-config.json?v=4', { credentials: 'same-origin' })
         .then(function (res) {
           if (!res.ok) throw new Error('config ' + res.status);
           return res.json();

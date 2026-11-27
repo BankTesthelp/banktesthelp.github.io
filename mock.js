@@ -20,6 +20,20 @@
     "pbo-recent-2026": "MEEZAN BANK LIMITED \u2014 Personal Banking Officer (PBO) \u2014 Written Test Preparation (60 Multiple Choice Questions)",
     "sbots-2026": "SBP \u2014 State Bank Officers Training Scheme (SBOTS) 29th Batch (OG-2) \u2014 Test Preparation 2026 (60 Questions)"
   };
+  // Dedicated "recent" tests built from the user's own sent questions.
+  // Loaded whole-file, in file order, via mock.html?bank=X&test=Y.
+  var RECENT_TESTS = {
+    "recent": { bank: "ubl", file: "ubl-recent-pattern-2026.json", minutes: 20, count: 15, title: "UBL \u2014 Recent Test 2026", label: "Recent Test 2026" },
+    "pbo-recent": { bank: "meezan", file: "meezan-pbo-recent-2026.json", minutes: 75, count: 60, title: "Meezan PBO \u2014 Recent Test 2026", label: "Recent Test 2026" },
+    "sbots-2026": { bank: "sbp", file: "sbp-sbots-2026.json", minutes: 75, count: 60, title: "SBP SBOTS \u2014 Test 2026", label: "SBOTS 2026" }
+  };
+  function recentKeyForBank(bank) {
+    var keys = Object.keys(RECENT_TESTS);
+    for (var i = 0; i < keys.length; i++) {
+      if (RECENT_TESTS[keys[i]].bank === bank) return keys[i];
+    }
+    return null;
+  }
   // Question count per topic and time limit per bank.
   // Default = standard 50-question / 60-minute full test.
   // BOP's current online assessment is 60 MCQs in about 75 minutes.
@@ -33,6 +47,7 @@
 
   var state = {
     bank: null,
+    recent: null,    // RECENT_TESTS entry while running a dedicated recent test
     config: DEFAULT_MOCK,
     questions: [],   // {q, options, answer, explanation, topic}
     index: 0,
@@ -40,6 +55,7 @@
     marked: [],      // marked-for-review flag per question, false by default
     secondsLeft: DEFAULT_MOCK.minutes * 60,
     timerId: null,
+    advanceTimerId: null,  // pending auto-advance after answering
     submitted: false,
     startTime: 0
   };
@@ -78,7 +94,10 @@
       pt.textContent = total + " questions · " + cfg.minutes + " minutes";
       b.appendChild(nm);
       b.appendChild(pt);
-      b.addEventListener("click", function () { loadMock(key); });
+      b.addEventListener("click", function () {
+        if (recentKeyForBank(key)) showTestChoice(key);
+        else loadMock(key);
+      });
       box.appendChild(b);
     });
     el("mockInfo").textContent =
@@ -88,9 +107,36 @@
       " (BOP online-assessment mock: 60 questions · 75 minutes)";
   }
 
+  /* ---------- Test choice (Standard vs Recent) ---------- */
+  function showTestChoice(bank) {
+    var key = recentKeyForBank(bank);
+    var cfg = RECENT_TESTS[key];
+    var scfg = mockConfig(bank);
+    var stotal = TOPICS.reduce(function (n, t) { return n + scfg.perTopic[t]; }, 0);
+    el("mockIntro").classList.add("hidden");
+    el("bankPick").classList.add("hidden");
+    el("mockChoiceBank").textContent = BANK_NAMES[bank];
+    el("mockChoiceNote").textContent = "Choose which test to take.";
+    el("mockChoiceStandardName").textContent = "Standard Mock Test";
+    el("mockChoiceStandardPattern").textContent = stotal + " questions \u00b7 " + scfg.minutes + " minutes";
+    el("mockChoiceRecentName").textContent = cfg.title;
+    el("mockChoiceRecentPattern").textContent = cfg.count + " questions \u00b7 " + cfg.minutes + " minutes";
+    el("mockTestChoice").classList.remove("hidden");
+    el("mockChoiceStandard").onclick = function () { loadMock(bank); };
+    el("mockChoiceRecent").onclick = function () { loadRecent(bank, key); };
+    el("mockChoiceBack").onclick = function (e) {
+      if (e) e.preventDefault();
+      el("mockTestChoice").classList.add("hidden");
+      el("mockIntro").classList.remove("hidden");
+      el("bankPick").classList.remove("hidden");
+    };
+  }
+
   /* ---------- Load all topics ---------- */
   function loadMock(bank) {
+    clearAdvance();
     state.bank = bank;
+    state.recent = null;
     state.config = mockConfig(bank);
     el("mockStart").innerHTML = '<p>Loading your mock test…</p>';
     var loads = TOPICS.map(function (t) {
@@ -121,6 +167,37 @@
       });
   }
 
+  /* ---------- Load a dedicated recent test (whole file, file order) ---------- */
+  function loadRecent(bank, testKey) {
+    var cfg = RECENT_TESTS[testKey];
+    if (!cfg || cfg.bank !== bank) { loadMock(bank); return; }
+    clearAdvance();
+    state.bank = bank;
+    state.recent = cfg;
+    state.config = { minutes: cfg.minutes };
+    TOPIC_NAMES["recent"] = cfg.label;
+    document.title = cfg.title + " | BankTest.pk";
+    el("mockStart").innerHTML = '<p>Loading your test\u2026</p>';
+    fetch("" + cfg.file)
+      .then(function (r) { if (!r.ok) throw new Error(cfg.file); return r.json(); })
+      .then(function (d) {
+        var list = (d.questions || []).slice();  // file order, no shuffle
+        state.questions = list.map(function (q) {
+          return { q: q.q, options: q.options, answer: q.answer, explanation: q.explanation, topic: "recent" };
+        });
+        state.chosen = state.questions.map(function () { return null; });
+        state.marked = state.questions.map(function () { return false; });
+        beginTest();
+      })
+      .catch(function () {
+        el("mockStart").innerHTML =
+          '<div class="note-box"><strong>Could not load this test.</strong><br>' +
+          'The question file could not be fetched. If you opened this page directly from a file, ' +
+          'serve the site over HTTP (e.g. python3 -m http.server).<br><br>' +
+          '<a class="btn btn-green" href="mock.html">Try Again</a></div>';
+      });
+  }
+
   /* ---------- Pre-selected test (from homepage Bank -> Post -> Test flow) ---------- */
   function showSelected(bank, post) {
     var cfg = mockConfig(bank);
@@ -137,6 +214,7 @@
 
   /* ---------- Test UI ---------- */
   function beginTest() {
+    clearAdvance();
     el("mockStart").classList.add("hidden");
     el("mockTest").classList.remove("hidden");
     state.startTime = Date.now();
@@ -205,7 +283,8 @@
     var row = el("mockSectionTabs");
     if (!row) return;
     row.innerHTML = "";
-    TOPICS.forEach(function (t) {
+    var tabTopics = state.recent ? ["recent"] : TOPICS;
+    tabTopics.forEach(function (t) {
       var tab = document.createElement("button");
       tab.type = "button";
       tab.className = "x-tab";
@@ -230,7 +309,8 @@
   function updateSectionTabs() {
     if (!state.questions.length) return;
     var currentTopic = state.questions[state.index] ? state.questions[state.index].topic : null;
-    TOPICS.forEach(function (t) {
+    var tabTopics = state.recent ? ["recent"] : TOPICS;
+    tabTopics.forEach(function (t) {
       var tab = el("xtab-" + t);
       var ct = el("xtab-count-" + t);
       if (!tab) return;
@@ -259,19 +339,54 @@
     updateNavDots();
   }
 
+  /* ---------- Auto-advance helpers ---------- */
+  function clearAdvance() {
+    if (state.advanceTimerId) { clearTimeout(state.advanceTimerId); state.advanceTimerId = null; }
+  }
+
+  function advanceAfterAnswer() {
+    clearAdvance();
+    if (state.submitted) return;
+    if (state.index < state.questions.length - 1) renderQ(state.index + 1);
+    else finishAfterLast();
+  }
+
+  function finishAfterLast() {
+    if (state.submitted) return;
+    state.submitted = true;
+    clearInterval(state.timerId);
+    showResults(false);
+  }
+
+  function selectMockOption(i) {
+    clearAdvance();
+    state.chosen[state.index] = i;
+    renderQ(state.index);
+    // Auto-advance: show the feedback briefly, then move on.
+    // The Next button still works and skips the wait.
+    state.advanceTimerId = setTimeout(advanceAfterAnswer, 1500);
+  }
+
   function renderQ(i) {
+    clearAdvance();
     state.index = i;
     var q = state.questions[i];
     el("mockQCounter").textContent = "Question " + (i + 1) + " of " + state.questions.length;
     el("mockQTopic").textContent = TOPIC_NAMES[q.topic];
     el("mockQText").textContent = q.q;
 
+    var answered = state.chosen[i] !== null;
     var box = el("mockOptions");
     box.innerHTML = "";
     q.options.forEach(function (opt, oi) {
       var btn = document.createElement("button");
       btn.type = "button";
-      btn.className = "option-btn" + (state.chosen[i] === oi ? " correct" : "");
+      var cls = "option-btn";
+      if (answered) {
+        if (oi === q.answer) cls += " correct";
+        else if (oi === state.chosen[i]) cls += " wrong";
+      }
+      btn.className = cls;
       var letter = document.createElement("span");
       letter.className = "x-opt-letter";
       letter.textContent = String.fromCharCode(65 + oi);
@@ -280,19 +395,34 @@
       txt.className = "x-opt-text";
       txt.textContent = opt;
       btn.appendChild(txt);
-      btn.addEventListener("click", function () {
-        state.chosen[i] = oi;
-        renderQ(i);
-        updateNavDots();
-      });
+      btn.addEventListener("click", function () { selectMockOption(oi); });
       box.appendChild(btn);
     });
+
+    // Feedback + explanation once answered (stays visible on revisit).
+    var exp = el("mockExplanation");
+    if (exp) {
+      if (answered) {
+        var ok = state.chosen[i] === q.answer;
+        exp.innerHTML = "";
+        var strong = document.createElement("strong");
+        strong.textContent = ok ? "Correct!" : "Incorrect.";
+        var p = document.createElement("p");
+        p.textContent = q.explanation || "";
+        exp.appendChild(strong);
+        exp.appendChild(p);
+        exp.classList.remove("hidden");
+      } else {
+        exp.classList.add("hidden");
+      }
+    }
     updateMarkBtn();
     updateNavDots();
   }
 
   /* ---------- Submit & results ---------- */
   function submit(auto) {
+    clearAdvance();
     if (state.submitted) return;
     if (!auto) {
       var un = state.chosen.filter(function (c) { return c === null; }).length;
@@ -306,15 +436,23 @@
     showResults(auto);
   }
 
+  function resultTopics() {
+    return state.recent ? ["recent"] : TOPICS;
+  }
+
   function showResults(auto) {
     el("mockTest").classList.add("hidden");
     var res = el("mockResults");
     res.classList.remove("hidden");
+    if (state.recent) {
+      var rt = el("mockResultsTitle");
+      if (rt) rt.textContent = state.recent.title + " \u2014 Results";
+    }
 
     var total = state.questions.length;
     var score = 0;
     var byTopic = {};
-    TOPICS.forEach(function (t) { byTopic[t] = { correct: 0, total: 0 }; });
+    resultTopics().forEach(function (t) { byTopic[t] = { correct: 0, total: 0 }; });
 
     state.questions.forEach(function (q, i) {
       byTopic[q.topic].total++;
@@ -374,7 +512,7 @@
     // Section-wise breakdown bars
     var breakdown = el("sectionTable");
     breakdown.innerHTML = "";
-    TOPICS.forEach(function (t) {
+    resultTopics().forEach(function (t) {
       var pctT = byTopic[t].total ? Math.round((byTopic[t].correct / byTopic[t].total) * 100) : 0;
       var row = document.createElement("div");
       row.className = "x-break-row";
@@ -399,7 +537,7 @@
     // Review grouped by topic
     var list = el("mockReview");
     list.innerHTML = "";
-    TOPICS.forEach(function (t) {
+    resultTopics().forEach(function (t) {
       var h = document.createElement("h3");
       h.textContent = TOPIC_NAMES[t];
       h.style.marginTop = "18px";
@@ -447,8 +585,10 @@
     var params = new URLSearchParams(window.location.search);
     var bank = (params.get("bank") || "").toLowerCase();
     var post = (params.get("post") || "").trim();
+    var test = (params.get("test") || "").toLowerCase();
     if (bank && BANK_NAMES[bank]) {
-      if (post) showSelected(bank, post);
+      if (test && RECENT_TESTS[test] && RECENT_TESTS[test].bank === bank) loadRecent(bank, test);
+      else if (post) showSelected(bank, post);
       else loadMock(bank);
     }
   });

@@ -57,6 +57,15 @@
         <p class="quiz-meta" id="mockInfo"></p>
         <p id="mockIntro">Choose a bank to begin. Questions are drawn from all six sections: English, Mathematics, IQ &amp; Analytical Reasoning, General Knowledge, Current Affairs, and Banking &amp; Finance.</p>
         <div class="bank-pick" id="bankPick"></div>
+        <div id="mockTestChoice" class="hidden">
+          <p class="flow-chosen" id="mockChoiceBank"></p>
+          <p class="quiz-meta" id="mockChoiceNote"></p>
+          <div class="bank-pick">
+            <button type="button" class="btn btn-green bank-pick-btn" id="mockChoiceStandard"><span class="bank-pick-name" id="mockChoiceStandardName">Standard Mock Test</span><span class="bank-pick-pattern" id="mockChoiceStandardPattern"></span></button>
+            <button type="button" class="btn btn-green bank-pick-btn" id="mockChoiceRecent"><span class="bank-pick-name" id="mockChoiceRecentName">Recent Test 2026</span><span class="bank-pick-pattern" id="mockChoiceRecentPattern"></span></button>
+          </div>
+          <p class="mt-2"><a href="#" id="mockChoiceBack">&larr; Choose a different bank</a></p>
+        </div>
         <div id="mockSelected" class="hidden">
           <p class="flow-chosen" id="mockSelectedText"></p>
           <p class="quiz-meta" id="mockSelectedPattern"></p>
@@ -80,6 +89,7 @@
             <p class="q-counter"><span id="mockQCounter"></span> · <span id="mockQTopic"></span></p>
             <h2 class="q-text" id="mockQText"></h2>
             <div class="options" id="mockOptions"></div>
+            <div class="explanation hidden" id="mockExplanation"></div>
             <div class="quiz-nav">
               <button type="button" class="btn btn-outline" id="mockPrev">Previous</button>
               <button type="button" class="btn btn-green" id="mockNext">Next</button>
@@ -97,7 +107,7 @@
 
       <!-- Results screen -->
       <div id="mockResults" class="hidden results x-result">
-        <h2>Full Test Results</h2>
+        <h2 id="mockResultsTitle">Full Test Results</h2>
         <div class="score-ring">
           <svg viewBox="0 0 120 120" width="150" height="150" aria-hidden="true">
             <circle class="ring-bg" cx="60" cy="60" r="52"></circle>

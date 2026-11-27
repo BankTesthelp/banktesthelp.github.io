@@ -49,7 +49,8 @@
     score: 0,
     answers: [],   // {chosen: n|null, correct: bool}
     startTime: 0,
-    timerId: null
+    timerId: null,
+    advanceTimerId: null  // pending auto-advance after answering
   };
 
   function fmtTime(ms) {
@@ -115,6 +116,7 @@
   }
 
   function startQuiz() {
+    if (state.advanceTimerId) { clearTimeout(state.advanceTimerId); state.advanceTimerId = null; }
     state.index = 0;
     state.score = 0;
     state.answers = [];
@@ -215,9 +217,14 @@
     updateLiveScore();
     updatePalette();
     el("nextBtn").classList.remove("hidden");
+    // Auto-advance: show the feedback briefly, then move on.
+    // The Next button still works and skips the wait.
+    if (state.advanceTimerId) clearTimeout(state.advanceTimerId);
+    state.advanceTimerId = setTimeout(nextStep, 1500);
   }
 
   function nextStep() {
+    if (state.advanceTimerId) { clearTimeout(state.advanceTimerId); state.advanceTimerId = null; }
     state.index++;
     if (state.index >= state.questions.length) {
       showResults();
